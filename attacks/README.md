@@ -2,7 +2,15 @@
 Code for conducting attacks mentioned in the paper. We have 2 zero-day attacks which have been reported to respective authorities as well. 
 
 ## GPS Spoofing
-You need to have a software-defined radio like HackRF One which could simulate GPS L1 signal. You can generate fake GPS messages based on the <a href="https://github.com/osqzss/gps-sdr-sim" target="_blank"> GPS position simulator</a>.
+### Prerequisite
+1) You need to have a software-defined radio like <a href="https://greatscottgadgets.com/hackrf/one/" target="_blank">HackRF One</a> which could simulate GPS L1 signal. 
+2) Install HackRF package
+```bash
+sudo apt-get update -y
+sudo apt-get install -y hackrf
+```
+
+3) Install <a href="https://github.com/osqzss/gps-sdr-sim" target="_blank"> GPS position simulator</a>
 
 
 ### How to execute it?
