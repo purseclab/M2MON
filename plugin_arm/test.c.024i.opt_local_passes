@@ -1,0 +1,43 @@
+main ()
+{
+  int D.5158;
+  int _3;
+
+  <bb 2>:
+  iowrite_example ();
+  _3 = 0;
+
+<L0>:
+  return _3;
+
+}
+
+
+__attribute__((irqbox_test))
+iowrite_example ()
+{
+  unsigned int * SLR.3;
+  unsigned int * SSP.2;
+  unsigned int * SSB.1;
+  struct UART * uart_2;
+  struct UART * uart_1.0;
+  struct UART * uart_1.0_4;
+
+  <bb 2>:
+  SSB.1 = 268435456;
+  SSP.2 = MEM[(void *)SSB.1];
+  SSP.2 = SSP.2 - 4;
+  MEM[(void *)SSB.1] = SSP.2;
+  MEM[(void *)SSP.2] = SLR.3;
+  uart_2_1 = 266403840B;
+  cputreg32 (1, &uart_2_1->DR);
+  uart_1.0_4 = uart_1;
+  cputreg32 (1, &uart_1.0_4->DR);
+  SLR.3 = MEM[(void *)SSP.2];
+  SSP.2 = SSP.2 + 4;
+  MEM[(void *)SSB.1] = SSP.2;
+  return;
+
+}
+
+

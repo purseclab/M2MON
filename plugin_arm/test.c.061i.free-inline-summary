@@ -1,0 +1,107 @@
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Symbol table:
+
+cputreg32/7 (cputreg32) @0x7fdd2a1a7e60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  First run: 0
+  Function flags:
+  Called by: iowrite_example/5 (1.00 per call) iowrite_example/5 (1.00 per call) 
+  Calls: 
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: uart_1/4 (read)
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: cputreg32/7 (1.00 per call) cputreg32/7 (1.00 per call) 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: available
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+main ()
+{
+  int D.5158;
+  int _3;
+
+  <bb 2>:
+  iowrite_example ();
+  _3 = 0;
+
+<L0>:
+  return _3;
+
+}
+
+
+__attribute__((irqbox_test))
+iowrite_example ()
+{
+  unsigned int * SLR.3;
+  unsigned int * SSP.2;
+  unsigned int * SSB.1;
+  struct UART * uart_2;
+  struct UART * uart_1.0;
+  struct UART * uart_1.0_4;
+
+  <bb 2>:
+  SSB.1_6 = 268435456;
+  SSP.2_7 = MEM[(void *)SSB.1_6];
+  SSP.2_8 = SSP.2_7 - 4;
+  MEM[(void *)SSB.1_6] = SSP.2_8;
+  MEM[(void *)SSP.2_8] = SLR.3_10(D);
+  uart_2_1 = 266403840B;
+  cputreg32 (1, &uart_2_1->DR);
+  uart_1.0_4 = uart_1;
+  cputreg32 (1, &uart_1.0_4->DR);
+  SLR.3_14 = MEM[(void *)SSP.2_8];
+  SSP.2_15 = SSP.2_8 + 4;
+  MEM[(void *)SSB.1_6] = SSP.2_15;
+  return;
+
+}
+
+

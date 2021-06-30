@@ -1,0 +1,1252 @@
+
+;; Function uint8_t crc_packet(IOPacket*) (_ZL10crc_packetP8IOPacket, funcdef_no=248, decl_uid=11772, cgraph_uid=243, symbol_order=244)
+
+__attribute__((unused))
+uint8_t crc_packet(IOPacket*) (struct IOPacket * pkt)
+{
+  uint8_t c;
+  uint8_t * p;
+  uint8_t * end;
+  unsigned char _5;
+  int _6;
+  int _7;
+  uint8_t * p.13_11;
+  unsigned char _13;
+  unsigned char _14;
+  int _15;
+  uint8_t _17;
+
+  <bb 2>:
+  _5 = pkt_4(D)->count_code;
+  _6 = (int) _5;
+  _7 = _6 & 63;
+  end_8 = &pkt_4(D)->regs[_7];
+  p_9 = pkt_4(D);
+  c_10 = 0;
+
+  <bb 3>:
+  # p_1 = PHI <p_9(2), p_12(4)>
+  # c_2 = PHI <c_10(2), c_16(4)>
+  if (p_1 >= end_8)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  p.13_11 = p_1;
+  p_12 = p.13_11 + 1;
+  _13 = *p.13_11;
+  _14 = _13 ^ c_2;
+  _15 = (int) _14;
+  c_16 = crc8_tab[_15];
+  goto <bb 3>;
+
+  <bb 5>:
+  _17 = c_2;
+  return _17;
+
+}
+
+
+
+;; Function PX4IO_serial::~PX4IO_serial() (_ZN12PX4IO_serialD2Ev, funcdef_no=255, decl_uid=11861, cgraph_uid=250, symbol_order=253)
+
+PX4IO_serial::~PX4IO_serial() (struct PX4IO_serial * const this)
+{
+  int (*__vtbl_ptr_type) () * _4;
+  void * _8;
+  void * _9;
+  void * _11;
+  void * _13;
+  void * _14;
+  void * _16;
+  volatile uint32_t * _18;
+  volatile uint32_t * _20;
+  volatile uint32_t * _22;
+  struct sem_t * _28;
+  struct sem_t * _30;
+  struct perf_ctr_header * _32;
+  struct perf_ctr_header * _34;
+  struct perf_ctr_header * _36;
+  struct perf_ctr_header * _38;
+  struct perf_ctr_header * _40;
+  struct perf_ctr_header * _42;
+  struct perf_ctr_header * _44;
+  struct perf_ctr_header * _46;
+  struct perf_ctr_header * _48;
+  struct perf_ctr_header * _50;
+  struct PX4IO_serial * g_interface.0_52;
+  struct Device * _54;
+  void * _57;
+
+  <bb 2>:
+  _4 = &_ZTV12PX4IO_serial + 8;
+  this_6(D)->D.11864._vptr.Device = _4;
+  _8 = this_6(D)->_tx_dma;
+  if (_8 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _9 = this_6(D)->_tx_dma;
+  stm32_dmastop (_9);
+  _11 = this_6(D)->_tx_dma;
+  stm32_dmafree (_11);
+
+  <bb 4>:
+  _13 = this_6(D)->_rx_dma;
+  if (_13 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _14 = this_6(D)->_rx_dma;
+  stm32_dmastop (_14);
+  _16 = this_6(D)->_rx_dma;
+  stm32_dmafree (_16);
+
+  <bb 6>:
+  _18 = 1073812492B;
+  *_18 ={v} 0;
+  _20 = 1073812496B;
+  *_20 ={v} 0;
+  _22 = 1073812500B;
+  *_22 ={v} 0;
+  up_disable_irq (87);
+  irq_attach (87, 0B);
+  stm32_unconfiggpio (625702);
+  stm32_unconfiggpio (625703);
+  _28 = &this_6(D)->_completion_semaphore;
+  sem_destroy (_28);
+  _30 = &this_6(D)->_bus_semaphore;
+  sem_destroy (_30);
+  _32 = this_6(D)->_pc_txns;
+  perf_free (_32);
+  _34 = this_6(D)->_pc_dmasetup;
+  perf_free (_34);
+  _36 = this_6(D)->_pc_retries;
+  perf_free (_36);
+  _38 = this_6(D)->_pc_timeouts;
+  perf_free (_38);
+  _40 = this_6(D)->_pc_crcerrs;
+  perf_free (_40);
+  _42 = this_6(D)->_pc_dmaerrs;
+  perf_free (_42);
+  _44 = this_6(D)->_pc_protoerrs;
+  perf_free (_44);
+  _46 = this_6(D)->_pc_uerrs;
+  perf_free (_46);
+  _48 = this_6(D)->_pc_idle;
+  perf_free (_48);
+  _50 = this_6(D)->_pc_badidle;
+  perf_free (_50);
+  g_interface.0_52 = g_interface;
+  if (g_interface.0_52 == this_6(D))
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  g_interface = 0B;
+
+  <bb 8>:
+  _54 = &this_6(D)->D.11864;
+  device::Device::~Device (_54);
+  MEM[(struct  &)this_6(D)] ={v} {CLOBBER};
+  _57 = this_6(D);
+  return _57;
+
+}
+
+
+
+;; Function virtual PX4IO_serial::~PX4IO_serial() (_ZN12PX4IO_serialD0Ev, funcdef_no=257, decl_uid=11855, cgraph_uid=252, symbol_order=255)
+
+virtual PX4IO_serial::~PX4IO_serial() (struct PX4IO_serial * const this)
+{
+  void * _5;
+
+  <bb 2>:
+  PX4IO_serial::~PX4IO_serial (this_2(D));
+  operator delete (this_2(D));
+  _5 = this_2(D);
+  return _5;
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::init() (_ZN12PX4IO_serial4initEv, funcdef_no=258, decl_uid=11789, cgraph_uid=253, symbol_order=256)
+
+virtual int PX4IO_serial::init() (struct PX4IO_serial * const this)
+{
+  uint32_t fraction;
+  uint32_t mantissa;
+  uint32_t usartdiv32;
+  int _1;
+  void * _5;
+  void * _9;
+  void * _11;
+  void * _12;
+  volatile uint32_t * _15;
+  volatile uint32_t * _17;
+  volatile uint32_t * _19;
+  volatile uint32_t * _21;
+  unsigned int vol.1_22;
+  volatile uint32_t * _23;
+  unsigned int vol.2_24;
+  unsigned int _27;
+  unsigned int _28;
+  unsigned int _29;
+  volatile uint32_t * _31;
+  unsigned int _32;
+  unsigned int _33;
+  volatile uint32_t * _37;
+  volatile uint32_t * _39;
+  struct sem_t * _41;
+  struct sem_t * _43;
+  int _45;
+  int _46;
+
+  <bb 2>:
+  _5 = stm32_dmachannel (125);
+  this_6(D)->_tx_dma = _5;
+  _9 = stm32_dmachannel (85);
+  this_6(D)->_rx_dma = _9;
+  _11 = this_6(D)->_tx_dma;
+  if (_11 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _12 = this_6(D)->_rx_dma;
+  if (_12 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  _46 = -1;
+  goto <bb 6>;
+
+  <bb 5>:
+  stm32_configgpio (625702);
+  stm32_configgpio (625703);
+  _15 = 1073812492B;
+  *_15 ={v} 0;
+  _17 = 1073812496B;
+  *_17 ={v} 0;
+  _19 = 1073812500B;
+  *_19 ={v} 0;
+  _21 = 1073812480B;
+  vol.1_22 ={v} *_21;
+  _23 = 1073812484B;
+  vol.2_24 ={v} *_23;
+  usartdiv32_25 = 112;
+  mantissa_26 = usartdiv32_25 >> 5;
+  _27 = mantissa_26 << 5;
+  _28 = usartdiv32_25 - _27;
+  _29 = _28 + 1;
+  fraction_30 = _29 >> 1;
+  _31 = 1073812488B;
+  _32 = mantissa_26 << 4;
+  _33 = _32 | fraction_30;
+  *_31 ={v} _33;
+  irq_attach (87, _interrupt);
+  up_enable_irq (87);
+  _37 = 1073812500B;
+  *_37 ={v} 1;
+  _39 = 1073812492B;
+  *_39 ={v} 8220;
+  _41 = &this_6(D)->_completion_semaphore;
+  sem_init (_41, 0, 0);
+  _43 = &this_6(D)->_bus_semaphore;
+  sem_init (_43, 0, 1);
+  _45 = 0;
+
+  <bb 6>:
+  # _1 = PHI <_46(4), _45(5)>
+  return _1;
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::ioctl(unsigned int, unsigned int&) (_ZN12PX4IO_serial5ioctlEjRj, funcdef_no=259, decl_uid=11803, cgraph_uid=254, symbol_order=257)
+
+virtual int PX4IO_serial::ioctl(unsigned int, unsigned int&) (struct PX4IO_serial * const this, unsigned int operation, unsigned int & arg)
+{
+  uint16_t value;
+  unsigned int count;
+  unsigned int fails;
+  int _5;
+  unsigned int _13;
+  int _15;
+  void * _18;
+  void * _20;
+  volatile uint32_t * _22;
+  volatile uint32_t * _23;
+  unsigned int _24;
+  unsigned int _25;
+  volatile uint32_t * _27;
+  unsigned int _28;
+  unsigned int _29;
+  bool retval.3_30;
+  volatile uint32_t * _31;
+  short unsigned int value.4_35;
+  int (*__vtbl_ptr_type) () * _37;
+  int (*__vtbl_ptr_type) () * _38;
+  int (*__vtbl_ptr_type) () _39;
+  int _41;
+  bool retval.5_42;
+  struct perf_ctr_header * _45;
+  struct perf_ctr_header * _47;
+  struct perf_ctr_header * _49;
+  struct perf_ctr_header * _51;
+  struct perf_ctr_header * _53;
+  struct perf_ctr_header * _55;
+  struct perf_ctr_header * _57;
+  struct perf_ctr_header * _59;
+  struct perf_ctr_header * _61;
+  struct perf_ctr_header * _63;
+  int _68;
+
+  <bb 2>:
+  switch (operation_10(D)) <default: <L19>, case 1: <L0>>
+
+<L0>:
+  _13 = *arg_12(D);
+  switch (_13) <default: <L19>, case 0: <L1>, case 1: <L6>, case 2: <L14>>
+
+<L1>:
+  lowsyslog ("test 0\n");
+  _18 = this_17(D)->_tx_dma;
+  stm32_dmastop (_18);
+  _20 = this_17(D)->_rx_dma;
+  stm32_dmastop (_20);
+  _22 = 1073812500B;
+  _23 = 1073812500B;
+  _24 ={v} *_23;
+  _25 = _24 & 4294967103;
+  *_23 ={v} _25;
+
+  <bb 5>:
+  _27 = 1073812480B;
+  _28 ={v} *_27;
+  _29 = _28 & 128;
+  retval.3_30 = _29 == 0;
+  if (retval.3_30 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  _31 = 1073812484B;
+  *_31 ={v} 85;
+  goto <bb 5>;
+
+<L6>:
+  fails_33 = 0;
+  count_34 = 0;
+
+  <bb 8>:
+  # fails_1 = PHI <fails_33(7), fails_2(12)>
+  # count_3 = PHI <count_34(7), count_67(12)>
+  value.4_35 = (short unsigned int) count_3;
+  value = value.4_35;
+  _37 = this_17(D)->D.11864._vptr.Device;
+  _38 = _37 + 20;
+  _39 = *_38;
+  _41 = OBJ_TYPE_REF(_39;(struct PX4IO_serial)this_17(D)->5) (this_17(D), 32512, &value, 1);
+  retval.5_42 = _41 != 0;
+  if (retval.5_42 != 0)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  fails_43 = fails_1 + 1;
+
+  <bb 10>:
+  # fails_2 = PHI <fails_1(8), fails_43(9)>
+  if (count_3 > 4999)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  lowsyslog ("==== test 1 : %u failures ====\n", fails_2);
+  _45 = this_17(D)->_pc_txns;
+  perf_print_counter (_45);
+  _47 = this_17(D)->_pc_dmasetup;
+  perf_print_counter (_47);
+  _49 = this_17(D)->_pc_retries;
+  perf_print_counter (_49);
+  _51 = this_17(D)->_pc_timeouts;
+  perf_print_counter (_51);
+  _53 = this_17(D)->_pc_crcerrs;
+  perf_print_counter (_53);
+  _55 = this_17(D)->_pc_dmaerrs;
+  perf_print_counter (_55);
+  _57 = this_17(D)->_pc_protoerrs;
+  perf_print_counter (_57);
+  _59 = this_17(D)->_pc_uerrs;
+  perf_print_counter (_59);
+  _61 = this_17(D)->_pc_idle;
+  perf_print_counter (_61);
+  _63 = this_17(D)->_pc_badidle;
+  perf_print_counter (_63);
+  count_65 = 0;
+
+  <bb 12>:
+  # count_4 = PHI <count_3(10), count_65(11)>
+  value ={v} {CLOBBER};
+  count_67 = count_4 + 1;
+  goto <bb 8>;
+
+<L14>:
+  lowsyslog ("test 2\n");
+  _15 = 0;
+  goto <bb 15>;
+
+<L19>:
+  _68 = -1;
+
+  <bb 15>:
+  # _5 = PHI <_15(13), _68(14)>
+  return _5;
+
+}
+
+
+
+;; Function void test_routine(unsigned int) (_Z12test_routinej, funcdef_no=250, decl_uid=11922, cgraph_uid=245, symbol_order=248)
+
+__attribute__((irqbox))
+void test_routine(unsigned int) (unsigned int status)
+{
+  int * p;
+  int array[2];
+
+  <bb 2>:
+  p_1 = &array;
+  *p_1 = 10;
+  array ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function PX4IO_serial::PX4IO_serial() (_ZN12PX4IO_serialC2Ev, funcdef_no=252, decl_uid=11853, cgraph_uid=247, symbol_order=250)
+
+PX4IO_serial::PX4IO_serial() (struct PX4IO_serial * const this)
+{
+  struct Device * _4;
+  int (*__vtbl_ptr_type) () * _6;
+  struct perf_ctr_header * _18;
+  struct perf_ctr_header * _21;
+  struct perf_ctr_header * _24;
+  struct perf_ctr_header * _27;
+  struct perf_ctr_header * _30;
+  struct perf_ctr_header * _33;
+  struct perf_ctr_header * _36;
+  struct perf_ctr_header * _39;
+  struct perf_ctr_header * _42;
+  struct perf_ctr_header * _45;
+  struct PX4IO_serial * _48;
+
+  <bb 2>:
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  _4 = &this_2(D)->D.11864;
+  device::Device::Device (_4, "PX4IO_serial", 0);
+  _6 = &_ZTV12PX4IO_serial + 8;
+  this_2(D)->D.11864._vptr.Device = _6;
+  this_2(D)->_tx_dma = 0B;
+  this_2(D)->_rx_dma = 0B;
+  this_2(D)->_rx_dma_status ={v} 2147483648;
+  this_2(D)->_bus_semaphore.semcount = 0;
+  this_2(D)->_bus_semaphore.holder.htcb = 0B;
+  this_2(D)->_bus_semaphore.holder.counts = 0;
+  this_2(D)->_completion_semaphore.semcount = 0;
+  this_2(D)->_completion_semaphore.holder.htcb = 0B;
+  this_2(D)->_completion_semaphore.holder.counts = 0;
+  _18 = perf_alloc (1, "io_txns     ");
+  this_2(D)->_pc_txns = _18;
+  _21 = perf_alloc (1, "io_dmasetup ");
+  this_2(D)->_pc_dmasetup = _21;
+  _24 = perf_alloc (0, "io_retries  ");
+  this_2(D)->_pc_retries = _24;
+  _27 = perf_alloc (0, "io_timeouts ");
+  this_2(D)->_pc_timeouts = _27;
+  _30 = perf_alloc (0, "io_crcerrs  ");
+  this_2(D)->_pc_crcerrs = _30;
+  _33 = perf_alloc (0, "io_dmaerrs  ");
+  this_2(D)->_pc_dmaerrs = _33;
+  _36 = perf_alloc (0, "io_protoerrs");
+  this_2(D)->_pc_protoerrs = _36;
+  _39 = perf_alloc (0, "io_uarterrs ");
+  this_2(D)->_pc_uerrs = _39;
+  _42 = perf_alloc (0, "io_idle     ");
+  this_2(D)->_pc_idle = _42;
+  _45 = perf_alloc (0, "io_badidle  ");
+  this_2(D)->_pc_badidle = _45;
+  g_interface = this_2(D);
+  _48 = this_2(D);
+  return _48;
+
+}
+
+
+
+;; Function device::Device* PX4IO_serial_interface() (_Z22PX4IO_serial_interfacev, funcdef_no=249, decl_uid=11781, cgraph_uid=244, symbol_order=247)
+
+device::Device* PX4IO_serial_interface() ()
+{
+  void * _3;
+  struct Device * _5;
+
+  <bb 2>:
+  _3 = operator new (112);
+  PX4IO_serial::PX4IO_serial (_3);
+  _5 = _3;
+  return _5;
+
+}
+
+
+
+;; Function void PX4IO_serial::_do_rx_dma_callback(unsigned int) (_ZN12PX4IO_serial19_do_rx_dma_callbackEj, funcdef_no=264, decl_uid=11820, cgraph_uid=259, symbol_order=262)
+
+__attribute__((irqbox))
+void PX4IO_serial::_do_rx_dma_callback(unsigned int) (struct PX4IO_serial * const this, unsigned int status)
+{
+  uint32_t sr;
+  unsigned int _6;
+  bool retval.14_7;
+  volatile uint32_t * _9;
+  unsigned int _11;
+  volatile uint32_t * _12;
+  unsigned int vol.15_13;
+  volatile uint32_t * _16;
+  volatile uint32_t * _17;
+  unsigned int _18;
+  unsigned int _19;
+  struct sem_t * _21;
+
+  <bb 2>:
+  _6 ={v} this_5(D)->_rx_dma_status;
+  retval.14_7 = _6 == 0;
+  if (retval.14_7 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 6>;
+
+  <bb 3>:
+  _9 = 1073812480B;
+  sr_10 ={v} *_9;
+  _11 = sr_10 & 40;
+  if (_11 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  _12 = 1073812484B;
+  vol.15_13 ={v} *_12;
+  status_14 = 8;
+
+  <bb 5>:
+  # status_1 = PHI <status_8(D)(3), status_14(4)>
+  this_5(D)->_rx_dma_status ={v} status_1;
+  _16 = 1073812500B;
+  _17 = 1073812500B;
+  _18 ={v} *_17;
+  _19 = _18 & 4294967103;
+  *_17 ={v} _19;
+  _21 = &this_5(D)->_completion_semaphore;
+  sem_post (_21);
+
+  <bb 6>:
+  # status_2 = PHI <status_8(D)(2), status_1(5)>
+  test_routine (status_2);
+  return;
+
+}
+
+
+
+;; Function static void PX4IO_serial::_dma_callback(DMA_HANDLE, uint8_t, void*) (_ZN12PX4IO_serial13_dma_callbackEPvhS0_, funcdef_no=263, decl_uid=11818, cgraph_uid=258, symbol_order=261)
+
+static void PX4IO_serial::_dma_callback(DMA_HANDLE, uint8_t, void*) (void * handle, uint8_t status, void * arg)
+{
+  struct PX4IO_serial * ps;
+  unsigned int _6;
+
+  <bb 2>:
+  if (arg_2(D) != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  ps_4 = arg_2(D);
+  _6 = (unsigned int) status_5(D);
+  PX4IO_serial::_do_rx_dma_callback (ps_4, _6);
+
+  <bb 4>:
+  return;
+
+}
+
+
+
+;; Function void PX4IO_serial::_abort_dma() (_ZN12PX4IO_serial10_abort_dmaEv, funcdef_no=267, decl_uid=11827, cgraph_uid=262, symbol_order=265)
+
+void PX4IO_serial::_abort_dma() (struct PX4IO_serial * const this)
+{
+  volatile uint32_t * _1;
+  volatile uint32_t * _2;
+  unsigned int _4;
+  unsigned int _5;
+  volatile uint32_t * _7;
+  unsigned int vol.21_8;
+  volatile uint32_t * _9;
+  unsigned int vol.22_10;
+  volatile uint32_t * _11;
+  unsigned int vol.23_12;
+  void * _14;
+  void * _16;
+
+  <bb 2>:
+  _1 = 1073812500B;
+  _2 = 1073812500B;
+  _4 ={v} *_2;
+  _5 = _4 & 4294967103;
+  *_2 ={v} _5;
+  _7 = 1073812480B;
+  vol.21_8 ={v} *_7;
+  _9 = 1073812484B;
+  vol.22_10 ={v} *_9;
+  _11 = 1073812484B;
+  vol.23_12 ={v} *_11;
+  _14 = this_13(D)->_tx_dma;
+  stm32_dmastop (_14);
+  _16 = this_13(D)->_rx_dma;
+  stm32_dmastop (_16);
+  return;
+
+}
+
+
+
+;; Function int PX4IO_serial::_wait_complete() (_ZN12PX4IO_serial14_wait_completeEv, funcdef_no=262, decl_uid=11813, cgraph_uid=257, symbol_order=260)
+
+int PX4IO_serial::_wait_complete() (struct PX4IO_serial * const this)
+{
+  uint8_t crc;
+  int ret;
+  struct timespec abstime;
+  volatile uint32_t * _4;
+  unsigned int vol.6_6;
+  volatile uint32_t * _7;
+  unsigned int vol.7_8;
+  struct perf_ctr_header * _10;
+  struct perf_ctr_header * _12;
+  void * _15;
+  unsigned int _dma_buffer.8_16;
+  void * _18;
+  volatile uint32_t * _20;
+  volatile uint32_t * _21;
+  unsigned int _22;
+  unsigned int _23;
+  unsigned char _27;
+  void * _29;
+  unsigned int _dma_buffer.8_30;
+  unsigned char _31;
+  int _32;
+  int _33;
+  uint16_t * _34;
+  int _35;
+  int _dma_buffer.9_36;
+  int _37;
+  unsigned int _38;
+  void * _40;
+  volatile uint32_t * _42;
+  volatile uint32_t * _43;
+  unsigned int _44;
+  unsigned int _45;
+  struct perf_ctr_header * _47;
+  long int _50;
+  long int _51;
+  long int _53;
+  unsigned int _54;
+  unsigned int _55;
+  long int _57;
+  long int _58;
+  struct sem_t * _60;
+  int * _64;
+  int _65;
+  bool retval.12_66;
+  int * _68;
+  int _69;
+  struct perf_ctr_header * _72;
+  struct perf_ctr_header * _74;
+  unsigned int _76;
+  unsigned int _77;
+  bool retval.10_78;
+  struct perf_ctr_header * _79;
+  unsigned char _85;
+  bool _86;
+  unsigned char _87;
+  int _88;
+  int _89;
+  bool _90;
+  bool retval.11_91;
+  struct perf_ctr_header * _92;
+  struct perf_ctr_header * _96;
+  int _98;
+
+  <bb 2>:
+  _4 = 1073812480B;
+  vol.6_6 ={v} *_4;
+  _7 = 1073812484B;
+  vol.7_8 ={v} *_7;
+  _10 = this_9(D)->_pc_txns;
+  perf_begin (_10);
+  _12 = this_9(D)->_pc_dmasetup;
+  perf_begin (_12);
+  this_9(D)->_rx_dma_status ={v} 0;
+  _15 = this_9(D)->_rx_dma;
+  _dma_buffer.8_16 = (unsigned int) &_dma_buffer;
+  stm32_dmasetup (_15, 1073812484, _dma_buffer.8_16, 68, 1280);
+  _18 = this_9(D)->_rx_dma;
+  stm32_dmastart (_18, _dma_callback, this_9(D), 0);
+  _20 = 1073812500B;
+  _21 = 1073812500B;
+  _22 ={v} *_21;
+  _23 = _22 | 64;
+  *_21 ={v} _23;
+  _dma_buffer.crc = 0;
+  _27 = crc_packet (&_dma_buffer);
+  _dma_buffer.crc = _27;
+  _29 = this_9(D)->_tx_dma;
+  _dma_buffer.8_30 = (unsigned int) &_dma_buffer;
+  _31 = _dma_buffer.count_code;
+  _32 = (int) _31;
+  _33 = _32 & 63;
+  _34 = &_dma_buffer.regs[_33];
+  _35 = (int) _34;
+  _dma_buffer.9_36 = (int) &_dma_buffer;
+  _37 = _35 - _dma_buffer.9_36;
+  _38 = (unsigned int) _37;
+  stm32_dmasetup (_29, 1073812484, _dma_buffer.8_30, _38, 1088);
+  _40 = this_9(D)->_tx_dma;
+  stm32_dmastart (_40, 0B, 0B, 0);
+  _42 = 1073812500B;
+  _43 = 1073812500B;
+  _44 ={v} *_43;
+  _45 = _44 | 128;
+  *_43 ={v} _45;
+  _47 = this_9(D)->_pc_dmasetup;
+  perf_end (_47);
+  clock_gettime (0, &abstime);
+  _50 = abstime.tv_nsec;
+  _51 = _50 + 10000000;
+  abstime.tv_nsec = _51;
+  _53 = abstime.tv_nsec;
+  if (_53 > 999999999)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _54 = abstime.tv_sec;
+  _55 = _54 + 1;
+  abstime.tv_sec = _55;
+  _57 = abstime.tv_nsec;
+  _58 = _57 + -1000000000;
+  abstime.tv_nsec = _58;
+
+  <bb 4>:
+  _60 = &this_9(D)->_completion_semaphore;
+  ret_62 = sem_timedwait (_60, &abstime);
+  if (ret_62 == 0)
+    goto <bb 5>;
+  else
+    goto <bb 9>;
+
+  <bb 5>:
+  _76 ={v} this_9(D)->_rx_dma_status;
+  _77 = _76 & 8;
+  retval.10_78 = _77 != 0;
+  if (retval.10_78 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  _79 = this_9(D)->_pc_dmaerrs;
+  perf_count (_79);
+  ret_81 = -5;
+  goto <bb 12>;
+
+  <bb 7>:
+  crc_82 = _dma_buffer.crc;
+  _dma_buffer.crc = 0;
+  _85 = crc_packet (&_dma_buffer);
+  _86 = _85 != crc_82;
+  _87 = _dma_buffer.count_code;
+  _88 = (int) _87;
+  _89 = _88 & 192;
+  _90 = _89 == 64;
+  retval.11_91 = _86 | _90;
+  if (retval.11_91 != 0)
+    goto <bb 8>;
+  else
+    goto <bb 12>;
+
+  <bb 8>:
+  _92 = this_9(D)->_pc_crcerrs;
+  perf_count (_92);
+  ret_94 = -5;
+  goto <bb 12>;
+
+  <bb 9>:
+  _64 = get_errno_ptr ();
+  _65 = *_64;
+  retval.12_66 = _65 == 110;
+  if (retval.12_66 != 0)
+    goto <bb 10>;
+  else
+    goto <bb 11>;
+
+  <bb 10>:
+  PX4IO_serial::_abort_dma (this_9(D));
+  _72 = this_9(D)->_pc_timeouts;
+  perf_count (_72);
+  _74 = this_9(D)->_pc_txns;
+  perf_cancel (_74);
+  goto <bb 12>;
+
+  <bb 11>:
+  _68 = get_errno_ptr ();
+  _69 = *_68;
+  lowsyslog ("unexpected ret %d/%d\n", ret_62, _69);
+  goto <bb 4>;
+
+  <bb 12>:
+  # ret_1 = PHI <ret_81(6), ret_94(8), ret_62(7), ret_62(10)>
+  this_9(D)->_rx_dma_status ={v} 2147483648;
+  _96 = this_9(D)->_pc_txns;
+  perf_end (_96);
+  _98 = ret_1;
+  abstime ={v} {CLOBBER};
+  return _98;
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::write(unsigned int, void*, unsigned int) (_ZN12PX4IO_serial5writeEjPvj, funcdef_no=260, decl_uid=11799, cgraph_uid=255, symbol_order=258)
+
+virtual int PX4IO_serial::write(unsigned int, void*, unsigned int) (struct PX4IO_serial * const this, unsigned int address, void * data, unsigned int count)
+{
+  unsigned int i;
+  unsigned int retries;
+  int result;
+  const uint16_t * values;
+  uint8_t offset;
+  uint8_t page;
+  int _6;
+  unsigned int _12;
+  int _18;
+  struct sem_t * _21;
+  unsigned char _25;
+  unsigned char _26;
+  unsigned int _30;
+  struct perf_ctr_header * _37;
+  unsigned char _40;
+  int _41;
+  int _42;
+  struct perf_ctr_header * _44;
+  struct sem_t * _46;
+  int _49;
+
+  <bb 2>:
+  _12 = address_11(D) >> 8;
+  page_13 = (uint8_t) _12;
+  offset_14 = (uint8_t) address_11(D);
+  values_16 = data_15(D);
+  if (count_17(D) > 32)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _18 = -22;
+  goto <bb 16>;
+
+  <bb 4>:
+  _21 = &this_20(D)->_bus_semaphore;
+  sem_wait (_21);
+  retries_23 = 0;
+
+  <bb 5>:
+  # result_1 = PHI <result_24(D)(4), result_36(12)>
+  # retries_4 = PHI <retries_23(4), retries_39(12)>
+  if (retries_4 > 2)
+    goto <bb 13>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  _25 = (unsigned char) count_17(D);
+  _26 = _25 | 64;
+  _dma_buffer.count_code = _26;
+  _dma_buffer.page = page_13;
+  _dma_buffer.offset = offset_14;
+  _30 = count_17(D) * 2;
+  memcpy (&_dma_buffer.regs[0], values_16, _30);
+  i_32 = count_17(D);
+
+  <bb 7>:
+  # i_5 = PHI <i_32(6), i_34(8)>
+  if (i_5 > 31)
+    goto <bb 9>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  _dma_buffer.regs[i_5] = 21930;
+  i_34 = i_5 + 1;
+  goto <bb 7>;
+
+  <bb 9>:
+  result_36 = PX4IO_serial::_wait_complete (this_20(D));
+  if (result_36 == 0)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+  <bb 10>:
+  _40 = _dma_buffer.count_code;
+  _41 = (int) _40;
+  _42 = _41 & 192;
+  if (_42 == 128)
+    goto <bb 11>;
+  else
+    goto <bb 13>;
+
+  <bb 11>:
+  result_43 = -22;
+  _44 = this_20(D)->_pc_protoerrs;
+  perf_count (_44);
+  goto <bb 13>;
+
+  <bb 12>:
+  _37 = this_20(D)->_pc_retries;
+  perf_count (_37);
+  retries_39 = retries_4 + 1;
+  goto <bb 5>;
+
+  <bb 13>:
+  # result_2 = PHI <result_1(5), result_43(11), result_36(10)>
+  _46 = &this_20(D)->_bus_semaphore;
+  sem_post (_46);
+  if (result_2 == 0)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  result_48 = (int) count_17(D);
+
+  <bb 15>:
+  # result_3 = PHI <result_2(13), result_48(14)>
+  _49 = result_3;
+
+  <bb 16>:
+  # _6 = PHI <_18(3), _49(15)>
+  return _6;
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::read(unsigned int, void*, unsigned int) (_ZN12PX4IO_serial4readEjPvj, funcdef_no=261, decl_uid=11794, cgraph_uid=256, symbol_order=259)
+
+virtual int PX4IO_serial::read(unsigned int, void*, unsigned int) (struct PX4IO_serial * const this, unsigned int address, void * data, unsigned int count)
+{
+  unsigned int retries;
+  int result;
+  uint16_t * values;
+  uint8_t offset;
+  uint8_t page;
+  int _5;
+  unsigned int _10;
+  int _16;
+  struct sem_t * _19;
+  unsigned char _23;
+  struct perf_ctr_header * _29;
+  unsigned char _32;
+  int _33;
+  int _34;
+  unsigned char _35;
+  unsigned int _36;
+  unsigned int _37;
+  struct perf_ctr_header * _39;
+  unsigned int _41;
+  struct perf_ctr_header * _44;
+  struct sem_t * _46;
+  int _49;
+
+  <bb 2>:
+  _10 = address_9(D) >> 8;
+  page_11 = (uint8_t) _10;
+  offset_12 = (uint8_t) address_9(D);
+  values_14 = data_13(D);
+  if (count_15(D) > 32)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _16 = -22;
+  goto <bb 16>;
+
+  <bb 4>:
+  _19 = &this_18(D)->_bus_semaphore;
+  sem_wait (_19);
+  retries_21 = 0;
+
+  <bb 5>:
+  # result_1 = PHI <result_22(D)(4), result_28(12)>
+  # retries_4 = PHI <retries_21(4), retries_31(12)>
+  if (retries_4 > 2)
+    goto <bb 13>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  _23 = (unsigned char) count_15(D);
+  _dma_buffer.count_code = _23;
+  _dma_buffer.page = page_11;
+  _dma_buffer.offset = offset_12;
+  result_28 = PX4IO_serial::_wait_complete (this_18(D));
+  if (result_28 == 0)
+    goto <bb 7>;
+  else
+    goto <bb 12>;
+
+  <bb 7>:
+  _32 = _dma_buffer.count_code;
+  _33 = (int) _32;
+  _34 = _33 & 192;
+  if (_34 == 128)
+    goto <bb 8>;
+  else
+    goto <bb 9>;
+
+  <bb 8>:
+  result_43 = -22;
+  _44 = this_18(D)->_pc_protoerrs;
+  perf_count (_44);
+  goto <bb 13>;
+
+  <bb 9>:
+  _35 = _dma_buffer.count_code;
+  _36 = (unsigned int) _35;
+  _37 = _36 & 63;
+  if (_37 != count_15(D))
+    goto <bb 10>;
+  else
+    goto <bb 11>;
+
+  <bb 10>:
+  result_38 = -5;
+  _39 = this_18(D)->_pc_protoerrs;
+  perf_count (_39);
+  goto <bb 13>;
+
+  <bb 11>:
+  _41 = count_15(D) * 2;
+  memcpy (values_14, &_dma_buffer.regs[0], _41);
+  goto <bb 13>;
+
+  <bb 12>:
+  _29 = this_18(D)->_pc_retries;
+  perf_count (_29);
+  retries_31 = retries_4 + 1;
+  goto <bb 5>;
+
+  <bb 13>:
+  # result_2 = PHI <result_1(5), result_38(10), result_43(8), result_28(11)>
+  _46 = &this_18(D)->_bus_semaphore;
+  sem_post (_46);
+  if (result_2 == 0)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  result_48 = (int) count_15(D);
+
+  <bb 15>:
+  # result_3 = PHI <result_2(13), result_48(14)>
+  _49 = result_3;
+
+  <bb 16>:
+  # _5 = PHI <_16(3), _49(15)>
+  return _5;
+
+}
+
+
+
+;; Function void PX4IO_serial::_do_interrupt() (_ZN12PX4IO_serial13_do_interruptEv, funcdef_no=266, decl_uid=11825, cgraph_uid=261, symbol_order=264)
+
+void PX4IO_serial::_do_interrupt() (struct PX4IO_serial * const this)
+{
+  size_t length;
+  uint32_t sr;
+  volatile uint32_t * _2;
+  volatile uint32_t * _5;
+  unsigned int vol.17_6;
+  unsigned int _7;
+  unsigned int _9;
+  bool retval.18_10;
+  struct perf_ctr_header * _12;
+  unsigned int _15;
+  unsigned int _16;
+  bool retval.19_17;
+  void * _18;
+  unsigned int _20;
+  unsigned char _22;
+  int _23;
+  int _24;
+  uint16_t * _25;
+  int _26;
+  int _dma_buffer.20_27;
+  int _28;
+  unsigned int _29;
+  struct perf_ctr_header * _30;
+  void * _32;
+  struct perf_ctr_header * _35;
+  void * _37;
+
+  <bb 2>:
+  _2 = 1073812480B;
+  sr_4 ={v} *_2;
+  _5 = 1073812484B;
+  vol.17_6 ={v} *_5;
+  _7 = sr_4 & 14;
+  if (_7 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 3>:
+  _9 ={v} this_8(D)->_rx_dma_status;
+  retval.18_10 = _9 == 0;
+  if (retval.18_10 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 11>;
+
+  <bb 4>:
+  PX4IO_serial::_abort_dma (this_8(D));
+  _12 = this_8(D)->_pc_uerrs;
+  perf_count (_12);
+  PX4IO_serial::_do_rx_dma_callback (this_8(D), 8);
+  goto <bb 11>;
+
+  <bb 5>:
+  _15 = sr_4 & 16;
+  if (_15 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 11>;
+
+  <bb 6>:
+  _16 ={v} this_8(D)->_rx_dma_status;
+  retval.19_17 = _16 == 0;
+  if (retval.19_17 != 0)
+    goto <bb 7>;
+  else
+    goto <bb 11>;
+
+  <bb 7>:
+  _18 = this_8(D)->_rx_dma;
+  _20 = stm32_dmaresidual (_18);
+  length_21 = 68 - _20;
+  if (length_21 == 0)
+    goto <bb 9>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  _22 = _dma_buffer.count_code;
+  _23 = (int) _22;
+  _24 = _23 & 63;
+  _25 = &_dma_buffer.regs[_24];
+  _26 = (int) _25;
+  _dma_buffer.20_27 = (int) &_dma_buffer;
+  _28 = _26 - _dma_buffer.20_27;
+  _29 = (unsigned int) _28;
+  if (_29 > length_21)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  _35 = this_8(D)->_pc_badidle;
+  perf_count (_35);
+  _37 = this_8(D)->_rx_dma;
+  stm32_dmastop (_37);
+  PX4IO_serial::_do_rx_dma_callback (this_8(D), 8);
+  goto <bb 11>;
+
+  <bb 10>:
+  _30 = this_8(D)->_pc_idle;
+  perf_count (_30);
+  _32 = this_8(D)->_rx_dma;
+  stm32_dmastop (_32);
+  PX4IO_serial::_do_rx_dma_callback (this_8(D), 32);
+
+  <bb 11>:
+  return;
+
+}
+
+
+
+;; Function static int PX4IO_serial::_interrupt(int, void*) (_ZN12PX4IO_serial10_interruptEiPv, funcdef_no=265, decl_uid=11824, cgraph_uid=260, symbol_order=263)
+
+static int PX4IO_serial::_interrupt(int, void*) (int irq, void * context)
+{
+  struct PX4IO_serial * g_interface.16_3;
+  struct PX4IO_serial * g_interface.16_4;
+  int _6;
+
+  <bb 2>:
+  g_interface.16_3 = g_interface;
+  if (g_interface.16_3 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  g_interface.16_4 = g_interface;
+  PX4IO_serial::_do_interrupt (g_interface.16_4);
+
+  <bb 4>:
+  _6 = 0;
+  return _6;
+
+}
+
+

@@ -1,0 +1,46 @@
+
+;; Function int testup_svcal() (_Z12testup_svcalv, funcdef_no=12, decl_uid=6903, cgraph_uid=12, symbol_order=12)
+
+__attribute__((irqbox))
+int testup_svcal() ()
+{
+  unsigned int leviathan.0;
+  int * shouldNot;
+  int b;
+  int D.6913;
+  int _5;
+
+  <bb 2>:
+  b = 0;
+  shouldNot_3 = &b;
+  leviathan.0_7 = (unsigned int) shouldNot_3;
+  leviathan.0_8 = leviathan.0_7 & 4294967295;
+  leviathan.0_9 = leviathan.0_8 | 0;
+  shouldNot_3 = (int *) leviathan.0_9;
+  *shouldNot_3 = 10;
+  _5 = 0;
+  b ={v} {CLOBBER};
+
+<L1>:
+  return _5;
+
+}
+
+
+
+;; Function int main() (main, funcdef_no=13, decl_uid=6908, cgraph_uid=13, symbol_order=13)
+
+int main() ()
+{
+  int D.6916;
+  int _1;
+
+  <bb 2>:
+  _1 = 0;
+
+<L0>:
+  return _1;
+
+}
+
+

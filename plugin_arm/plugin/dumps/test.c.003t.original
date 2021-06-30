@@ -1,0 +1,122 @@
+
+;; Function __sputc_r (null)
+;; enabled by -tree-original
+
+
+{
+  if ( --_p->_w >= 0 || _p->_w >= _p->_lbfsize && (unsigned char) _c != 10)
+    {
+      return (int) (*_p->_p++  = (unsigned char) _c);
+    }
+  else
+    {
+      return __swbuf_r (_ptr, _c, _p);
+    }
+}
+
+
+;; Function foo (null)
+;; enabled by -tree-original
+
+
+{
+  
+}
+
+
+;; Function fun (null)
+;; enabled by -tree-original
+
+
+{
+  
+}
+
+
+;; Function write (null)
+;; enabled by -tree-original
+
+
+{
+  *268308480B = 0;
+}
+
+
+;; Function testup_svcal (null)
+;; enabled by -tree-original
+
+
+{
+  int a = 0;
+  struct a st;
+  struct a * pst = &st;
+  volatile unsigned int * mem_ref = 268308480B;
+  volatile unsigned int * mem_ref2 = mem_ref;
+  unsigned int * simple = (unsigned int *) &a;
+  int b = 0;
+  unsigned int * shouldNot = (unsigned int *) &b;
+  void (*<Te27>) (int) fun_ptr = fun;
+
+    int a = 0;
+  a = 2;
+  *268308480B = 0;
+  a = (int) *268308480B;
+  *268308480B = 0;
+  a = (int) *268308480B;
+    struct a st;
+  st.a = 0;
+    struct a * pst = &st;
+  pst->a = 0;
+    volatile unsigned int * mem_ref = 268308480B;
+    volatile unsigned int * mem_ref2 = mem_ref;
+  *mem_ref = 0;
+    unsigned int * simple = (unsigned int *) &a;
+  *simple = 5;
+    int b = 0;
+    unsigned int * shouldNot = (unsigned int *) &b;
+  *shouldNot = 10;
+  *250482688B = 0;
+  global = 2;
+    void (*<Te27>) (int) fun_ptr = fun;
+  fun_ptr (10);
+  fun (10);
+}
+
+
+;; Function test2 (null)
+;; enabled by -tree-original
+
+
+{
+  return 1;
+}
+
+
+;; Function test3 (null)
+;; enabled by -tree-original
+
+
+{
+  testup_svcal ();
+}
+
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int c = 100;
+  int b = test2 (c);
+
+  printf ((const char * restrict) "Crap");
+    int c = 100;
+    int b = test2 (c);
+  b++ ;
+  test3 (b);
+  testup_svcal ();
+  testup_svcal ();
+  return 0;
+}
+return 0;
+

@@ -1,0 +1,343 @@
+Trivially needed symbols: main iowrite_example uart_1 ppg bazooka fish
+
+
+Initial Symbol table:
+
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x1ffba40  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x7fdd2a1c3170  References: uart_1/4 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output public
+  Aux: @0x7fdd2a1c3000  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: not-ready
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output public
+  Aux: @0x7fdd2a1bc900  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  Aux: @0x7fdd2a1bc880  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  Aux: @0x7fdd2a1bc700  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+__sputc_r/0 (__sputc_r) @0x7fdd2a1a7e60
+  Type: function definition
+  Visibility:
+  References: 
+  Referring: 
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: __sputc_r
+
+Reclaimed Symbol table:
+
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: uart_1/4 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: not-ready
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+
+Initial Symbol table:
+
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: uart_1/4 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: not-ready
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: uart_1/4 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: not-ready
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+cputreg32/7 (cputreg32) @0x7fdd2a1a7e60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  First run: 0
+  Function flags:
+  Called by: iowrite_example/5 (1.00 per call) iowrite_example/5 (1.00 per call) 
+  Calls: 
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: iowrite_example/5 (1.00 per call) 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: uart_1/4 (read)
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: main/6 (1.00 per call) 
+  Calls: cputreg32/7 (1.00 per call) cputreg32/7 (1.00 per call) 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: iowrite_example/5 (read)
+  Availability: available
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Final Symbol table:
+
+cputreg32/7 (cputreg32) @0x7fdd2a1a7e60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+main/6 (main) @0x7fdd2a1c3170
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+iowrite_example/5 (iowrite_example) @0x7fdd2a1c3000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+uart_1/4 (uart_1) @0x7fdd2a1bc900
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+ppg/3 (ppg) @0x7fdd2a1bc880
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+bazooka/2 (bazooka) @0x7fdd2a1bc700
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+fish/1 (fish) @0x7fdd2a1bc680
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:

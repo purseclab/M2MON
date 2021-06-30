@@ -1,0 +1,506 @@
+
+;; Function uint8_t crc_packet(IOPacket*) (_ZL10crc_packetP8IOPacket, funcdef_no=248, decl_uid=11772, cgraph_uid=243, symbol_order=244)
+
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4
+;; 2 succs { 3 }
+;; 3 succs { 5 4 }
+;; 4 succs { 3 }
+;; 5 succs { 1 }
+1 edges in bb 2 predicted to even probabilities
+Predictions for bb 3
+  DS theory heuristics (ignored): 6.0%
+  first match heuristics: 9.0%
+  combined heuristics: 9.0%
+  early return (on trees) heuristics (ignored): 39.0%
+  loop exit heuristics: 9.0%
+1 edges in bb 4 predicted to even probabilities
+1 edges in bb 5 predicted to even probabilities
+__attribute__((unused))
+uint8_t crc_packet(IOPacket*) (struct IOPacket * pkt)
+{
+  uint8_t c;
+  uint8_t * p;
+  uint8_t * end;
+  unsigned char _5;
+  int _7;
+  unsigned char _9;
+  unsigned char _13;
+  unsigned char _14;
+  int _15;
+
+  <bb 2>:
+  _5 = pkt_4(D)->count_code;
+  _9 = _5 & 63;
+  _7 = (int) _9;
+  end_8 = &pkt_4(D)->regs[_7];
+
+  <bb 3>:
+  # p_1 = PHI <pkt_4(D)(2), p_12(4)>
+  # c_2 = PHI <0(2), c_16(4)>
+  if (p_1 >= end_8)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  p_12 = p_1 + 1;
+  _13 = *p_1;
+  _14 = c_2 ^ _13;
+  _15 = (int) _14;
+  c_16 = crc8_tab[_15];
+  goto <bb 3>;
+
+  <bb 5>:
+  return c_2;
+
+}
+
+
+
+;; Function PX4IO_serial::~PX4IO_serial() (_ZN12PX4IO_serialD2Ev, funcdef_no=255, decl_uid=11861, cgraph_uid=250, symbol_order=253)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8
+;; 2 succs { 3 4 }
+;; 3 succs { 4 }
+;; 4 succs { 5 6 }
+;; 5 succs { 6 }
+;; 6 succs { 7 8 }
+;; 7 succs { 8 }
+;; 8 succs { 1 }
+Predictions for bb 2
+  DS theory heuristics: 69.8%
+  first match heuristics (ignored): 85.0%
+  combined heuristics: 69.8%
+  pointer (on trees) heuristics: 85.0%
+  call heuristics: 29.0%
+1 edges in bb 3 predicted to even probabilities
+Predictions for bb 4
+  DS theory heuristics: 69.8%
+  first match heuristics (ignored): 85.0%
+  combined heuristics: 69.8%
+  pointer (on trees) heuristics: 85.0%
+  call heuristics: 29.0%
+1 edges in bb 5 predicted to even probabilities
+Predictions for bb 6
+  DS theory heuristics: 21.6%
+  first match heuristics (ignored): 15.0%
+  combined heuristics: 21.6%
+  pointer (on trees) heuristics: 15.0%
+  early return (on trees) heuristics: 61.0%
+1 edges in bb 7 predicted to even probabilities
+1 edges in bb 8 predicted to even probabilities
+PX4IO_serial::~PX4IO_serial() (struct PX4IO_serial * const this)
+{
+  void * _8;
+  void * _11;
+  void * _13;
+  void * _16;
+  struct sem_t * _28;
+  struct sem_t * _30;
+  struct perf_ctr_header * _32;
+  struct perf_ctr_header * _34;
+  struct perf_ctr_header * _36;
+  struct perf_ctr_header * _38;
+  struct perf_ctr_header * _40;
+  struct perf_ctr_header * _42;
+  struct perf_ctr_header * _44;
+  struct perf_ctr_header * _46;
+  struct perf_ctr_header * _48;
+  struct perf_ctr_header * _50;
+  struct PX4IO_serial * g_interface.0_52;
+  struct Device * _54;
+
+  <bb 2>:
+  this_6(D)->D.11864._vptr.Device = &MEM[(void *)&_ZTV12PX4IO_serial + 8B];
+  _8 = this_6(D)->_tx_dma;
+  if (_8 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  stm32_dmastop (_8);
+  _11 = this_6(D)->_tx_dma;
+  stm32_dmafree (_11);
+
+  <bb 4>:
+  _13 = this_6(D)->_rx_dma;
+  if (_13 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  stm32_dmastop (_13);
+  _16 = this_6(D)->_rx_dma;
+  stm32_dmafree (_16);
+
+  <bb 6>:
+  MEM[(volatile uint32_t *)1073812492B] ={v} 0;
+  MEM[(volatile uint32_t *)1073812496B] ={v} 0;
+  MEM[(volatile uint32_t *)1073812500B] ={v} 0;
+  up_disable_irq (87);
+  irq_attach (87, 0B);
+  stm32_unconfiggpio (625702);
+  stm32_unconfiggpio (625703);
+  _28 = &this_6(D)->_completion_semaphore;
+  sem_destroy (_28);
+  _30 = &this_6(D)->_bus_semaphore;
+  sem_destroy (_30);
+  _32 = this_6(D)->_pc_txns;
+  perf_free (_32);
+  _34 = this_6(D)->_pc_dmasetup;
+  perf_free (_34);
+  _36 = this_6(D)->_pc_retries;
+  perf_free (_36);
+  _38 = this_6(D)->_pc_timeouts;
+  perf_free (_38);
+  _40 = this_6(D)->_pc_crcerrs;
+  perf_free (_40);
+  _42 = this_6(D)->_pc_dmaerrs;
+  perf_free (_42);
+  _44 = this_6(D)->_pc_protoerrs;
+  perf_free (_44);
+  _46 = this_6(D)->_pc_uerrs;
+  perf_free (_46);
+  _48 = this_6(D)->_pc_idle;
+  perf_free (_48);
+  _50 = this_6(D)->_pc_badidle;
+  perf_free (_50);
+  g_interface.0_52 = g_interface;
+  if (this_6(D) == g_interface.0_52)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  g_interface = 0B;
+
+  <bb 8>:
+  _54 = &this_6(D)->D.11864;
+  device::Device::~Device (_54);
+  MEM[(struct  &)this_6(D)] ={v} {CLOBBER};
+  return this_6(D);
+
+}
+
+
+
+;; Function virtual PX4IO_serial::~PX4IO_serial() (_ZN12PX4IO_serialD0Ev, funcdef_no=257, decl_uid=11855, cgraph_uid=252, symbol_order=255)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+1 edges in bb 2 predicted to even probabilities
+virtual PX4IO_serial::~PX4IO_serial() (struct PX4IO_serial * const this)
+{
+  <bb 2>:
+  PX4IO_serial::~PX4IO_serial (this_2(D));
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::init() (_ZN12PX4IO_serial4initEv, funcdef_no=258, decl_uid=11789, cgraph_uid=253, symbol_order=256)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;; 2 succs { 5 3 }
+;; 3 succs { 5 4 }
+;; 4 succs { 5 }
+;; 5 succs { 1 }
+Predictions for bb 2
+  DS theory heuristics: 0.7%
+  first match heuristics (ignored): 15.0%
+  combined heuristics: 0.7%
+  pointer (on trees) heuristics: 15.0%
+  negative return heuristics: 4.0%
+Predictions for bb 3
+  DS theory heuristics: 1.8%
+  first match heuristics (ignored): 15.0%
+  combined heuristics: 1.8%
+  pointer (on trees) heuristics: 15.0%
+  call heuristics: 71.0%
+  negative return heuristics: 4.0%
+1 edges in bb 4 predicted to even probabilities
+1 edges in bb 5 predicted to even probabilities
+virtual int PX4IO_serial::init() (struct PX4IO_serial * const this)
+{
+  uint32_t fraction;
+  uint32_t mantissa;
+  uint32_t usartdiv32;
+  int _1;
+  void * _5;
+  void * _9;
+  void * _11;
+  unsigned int vol.1_22;
+  unsigned int vol.2_24;
+  struct sem_t * _41;
+  struct sem_t * _43;
+
+  <bb 2>:
+  _5 = stm32_dmachannel (125);
+  this_6(D)->_tx_dma = _5;
+  _9 = stm32_dmachannel (85);
+  this_6(D)->_rx_dma = _9;
+  _11 = this_6(D)->_tx_dma;
+  if (_11 == 0B)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  if (_9 == 0B)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  stm32_configgpio (625702);
+  stm32_configgpio (625703);
+  MEM[(volatile uint32_t *)1073812492B] ={v} 0;
+  MEM[(volatile uint32_t *)1073812496B] ={v} 0;
+  MEM[(volatile uint32_t *)1073812500B] ={v} 0;
+  vol.1_22 ={v} MEM[(volatile uint32_t *)1073812480B];
+  vol.2_24 ={v} MEM[(volatile uint32_t *)1073812484B];
+  MEM[(volatile uint32_t *)1073812488B] ={v} 56;
+  irq_attach (87, _interrupt);
+  up_enable_irq (87);
+  MEM[(volatile uint32_t *)1073812500B] ={v} 1;
+  MEM[(volatile uint32_t *)1073812492B] ={v} 8220;
+  _41 = &this_6(D)->_completion_semaphore;
+  sem_init (_41, 0, 0);
+  _43 = &this_6(D)->_bus_semaphore;
+  sem_init (_43, 0, 1);
+
+  <bb 5>:
+  # _1 = PHI <-1(3), 0(4), -1(2)>
+  return _1;
+
+}
+
+
+
+;; Function virtual int PX4IO_serial::ioctl(unsigned int, unsigned int&) (_ZN12PX4IO_serial5ioctlEjRj, funcdef_no=259, decl_uid=11803, cgraph_uid=254, symbol_order=257)
+
+;; 4 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 16 8 9 10 11 12 13 14 15
+;;
+;; Loop 2
+;;  header 6, latch 8
+;;  depth 1, outer 0
+;;  nodes: 6 8 7 16
+;;
+;; Loop 3
+;;  header 7, latch 16
+;;  depth 2, outer 2
+;;  nodes: 7 16
+;;
+;; Loop 1
+;;  header 9, latch 13
+;;  depth 1, outer 0
+;;  nodes: 9 13 11 12 10
+;; 2 succs { 15 3 }
+;; 3 succs { 15 5 4 14 }
+;; 4 succs { 9 }
+;; 5 succs { 6 }
+;; 6 succs { 7 }
+;; 7 succs { 16 8 }
+;; 16 succs { 7 }
+;; 8 succs { 6 }
+;; 9 succs { 10 11 }
+;; 10 succs { 11 }
+;; 11 succs { 12 13 }
+;; 12 succs { 13 }
+;; 13 succs { 9 }
+;; 14 succs { 15 }
+;; 15 succs { 1 }
+Predictions for bb 2
+  DS theory heuristics: 4.0%
+  first match heuristics (ignored): 4.0%
+  combined heuristics: 4.0%
+  negative return heuristics: 4.0%
+4 edges in bb 3 predicted to even probabilities
+1 edges in bb 4 predicted to even probabilities
+1 edges in bb 5 predicted to even probabilities
+1 edges in bb 6 predicted to even probabilities
+Predictions for bb 7
+  DS theory heuristics (ignored): 100.0%
+  first match heuristics: 95.5%
+  combined heuristics: 95.5%
+  loop exit heuristics: 95.5%
+  loop exit heuristics: 95.5%
+  loop exit heuristics: 91.0%
+1 edges in bb 16 predicted to even probabilities
+1 edges in bb 8 predicted to even probabilities
+Predictions for bb 9
+  no prediction heuristics: 50.0%
+  combined heuristics: 50.0%
+1 edges in bb 10 predicted to even probabilities
+Predictions for bb 11
+  DS theory heuristics: 29.0%
+  first match heuristics (ignored): 29.0%
+  combined heuristics: 29.0%
+  call heuristics: 29.0%
+1 edges in bb 12 predicted to even probabilities
+1 edges in bb 13 predicted to even probabilities
+1 edges in bb 14 predicted to even probabilities
+1 edges in bb 15 predicted to even probabilities
+virtual int PX4IO_serial::ioctl(unsigned int, unsigned int&) (struct PX4IO_serial * const this, unsigned int operation, unsigned int & arg)
+{
+  uint16_t value;
+  unsigned int count;
+  unsigned int fails;
+  int _5;
+  unsigned int _13;
+  void * _18;
+  void * _20;
+  unsigned int _24;
+  unsigned int _25;
+  unsigned int _28;
+  unsigned int _29;
+  short unsigned int value.4_35;
+  int (*__vtbl_ptr_type) () * _37;
+  int (*__vtbl_ptr_type) () _39;
+  int _41;
+  struct perf_ctr_header * _45;
+  struct perf_ctr_header * _47;
+  struct perf_ctr_header * _49;
+  struct perf_ctr_header * _51;
+  struct perf_ctr_header * _53;
+  struct perf_ctr_header * _55;
+  struct perf_ctr_header * _57;
+  struct perf_ctr_header * _59;
+  struct perf_ctr_header * _61;
+  struct perf_ctr_header * _63;
+
+  <bb 2>:
+  switch (operation_10(D)) <default: <L21>, case 1: <L0>>
+
+<L0>:
+  _13 = *arg_12(D);
+  switch (_13) <default: <L21>, case 0: <L1>, case 1: <L20>, case 2: <L14>>
+
+  # fails_38 = PHI <0(3)>
+  # count_30 = PHI <0(3)>
+<L20>:
+  goto <bb 9>;
+
+<L1>:
+  lowsyslog ("test 0\n");
+  _18 = this_17(D)->_tx_dma;
+  stm32_dmastop (_18);
+  _20 = this_17(D)->_rx_dma;
+  stm32_dmastop (_20);
+  _24 ={v} MEM[(volatile uint32_t *)1073812500B];
+  _25 = _24 & 4294967103;
+  MEM[(volatile uint32_t *)1073812500B] ={v} _25;
+
+  <bb 6>:
+
+  <bb 7>:
+  _28 ={v} MEM[(volatile uint32_t *)1073812480B];
+  _29 = _28 & 128;
+  if (_29 == 0)
+    goto <bb 16>;
+  else
+    goto <bb 8>;
+
+  <bb 16>:
+  goto <bb 7>;
+
+  <bb 8>:
+  MEM[(volatile uint32_t *)1073812484B] ={v} 85;
+  goto <bb 6>;
+
+  <bb 9>:
+  # fails_1 = PHI <fails_38(4), fails_2(13)>
+  # count_3 = PHI <count_30(4), count_67(13)>
+  value.4_35 = (short unsigned int) count_3;
+  value = value.4_35;
+  _37 = this_17(D)->D.11864._vptr.Device;
+  _39 = MEM[(int (*__vtbl_ptr_type) () *)_37 + 20B];
+  _41 = OBJ_TYPE_REF(_39;(struct PX4IO_serial)this_17(D)->5) (this_17(D), 32512, &value, 1);
+  if (_41 != 0)
+    goto <bb 10>;
+  else
+    goto <bb 11>;
+
+  <bb 10>:
+  fails_43 = fails_1 + 1;
+
+  <bb 11>:
+  # fails_2 = PHI <fails_1(9), fails_43(10)>
+  if (count_3 > 4999)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  lowsyslog ("==== test 1 : %u failures ====\n", fails_2);
+  _45 = this_17(D)->_pc_txns;
+  perf_print_counter (_45);
+  _47 = this_17(D)->_pc_dmasetup;
+  perf_print_counter (_47);
+  _49 = this_17(D)->_pc_retries;
+  perf_print_counter (_49);
+  _51 = this_17(D)->_pc_timeouts;
+  perf_print_counter (_51);
+  _53 = this_17(D)->_pc_crcerrs;
+  perf_print_counter (_53);
+  _55 = this_17(D)->_pc_dmaerrs;
+  perf_print_counter (_55);
+  _57 = this_17(D)->_pc_protoerrs;
+  perf_print_counter (_57);
+  _59 = this_17(D)->_pc_uerrs;
+  perf_print_counter (_59);
+  _61 = this_17(D)->_pc_idle;
+  perf_print_counter (_61);
+  _63 = this_17(D)->_pc_badidle;
+  perf_print_counter (_63);
+
+  <bb 13>:
+  # count_4 = PHI <count_3(11), 0(12)>
+  value ={v} {CLOBBER};
+  count_67 = count_4 + 1;
+  goto <bb 9>;
+
+<L14>:
+  lowsyslog ("test 2\n");
+
+  # _5 = PHI <0(14), -1(2), -1(3)>
+<L21>:
+  return _5;
+
+}
+
+

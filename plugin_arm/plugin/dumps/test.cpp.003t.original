@@ -1,0 +1,145 @@
+
+;; Function uint8_t getprimask() (null)
+;; enabled by -tree-original
+
+
+{
+  uint32_t primask;
+
+    uint32_t primask;
+  <<cleanup_point __asm__ __volatile__("\tmrs  %0, primask\n":"=r" primask::"memory")>>;
+  return <retval> = (uint8_t) primask;
+}
+
+
+;; Function void setprimask(uint32_t) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point __asm__ __volatile__("\tmsr primask, %0\n"::"r" primask:"memory")>>;
+
+
+;; Function uint8_t getbasepri() (null)
+;; enabled by -tree-original
+
+
+{
+  uint32_t basepri;
+
+    uint32_t basepri;
+  <<cleanup_point __asm__ __volatile__("\tmrs  %0, basepri\n":"=r" basepri::"memory")>>;
+  return <retval> = (uint8_t) basepri;
+}
+
+
+;; Function void setbasepri(uint32_t) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point __asm__ __volatile__("\tmsr basepri, %0\n"::"r" basepri:"memory")>>;
+
+
+;; Function void irqdisable() (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  setbasepri (16) >>>>>;
+
+
+;; Function irqstate_t irqsave() (null)
+;; enabled by -tree-original
+
+
+{
+  uint8_t basepri;
+
+    uint8_t basepri;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (basepri = getbasepri ()) >>>>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  setbasepri (16) >>>>>;
+  return <retval> = basepri;
+}
+
+
+;; Function void irqenable() (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  setbasepri (0) >>>>>;
+<<cleanup_point __asm__ __volatile__("\tcpsie  i\n"::)>>;
+
+
+;; Function void irqrestore(irqstate_t) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  setbasepri ((uint32_t) flags) >>>>>;
+
+
+;; Function uint32_t getipsr() (null)
+;; enabled by -tree-original
+
+
+{
+  uint32_t ipsr;
+
+    uint32_t ipsr;
+  <<cleanup_point __asm__ __volatile__("\tmrs  %0, ipsr\n":"=r" ipsr::"memory")>>;
+  return <retval> = ipsr;
+}
+
+
+;; Function void setipsr(uint32_t) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point __asm__ __volatile__("\tmsr ipsr, %0\n"::"r" ipsr:"memory")>>;
+
+
+;; Function uint32_t getcontrol() (null)
+;; enabled by -tree-original
+
+
+{
+  uint32_t control;
+
+    uint32_t control;
+  <<cleanup_point __asm__ __volatile__("\tmrs  %0, control\n":"=r" control::"memory")>>;
+  return <retval> = control;
+}
+
+
+;; Function void setcontrol(uint32_t) (null)
+;; enabled by -tree-original
+
+
+<<cleanup_point __asm__ __volatile__("\tmsr control, %0\n"::"r" control:"memory")>>;
+
+
+;; Function int testup_svcal() (null)
+;; enabled by -tree-original
+
+
+{
+  int b = 0;
+  int * shouldNot = &b;
+
+  <<cleanup_point   int b = 0;>>;
+    int * shouldNot = &b;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*shouldNot = 10) >>>>>;
+  return <retval> = 0;
+}
+
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+
+return <retval> = 0;
+return <retval> = 0;
+

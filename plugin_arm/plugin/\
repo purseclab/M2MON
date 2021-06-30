@@ -1,0 +1,76 @@
+#include <cstddef>
+#include <gcc-plugin.h>
+#include "plugin.h"
+#include "plugin-version.h"
+#include "tree-core.h"
+int  plugin_is_GPL_compatible;
+void init_attributes (void);
+
+tree attr_handler (tree *node, tree name, tree args,
+                   int flags, bool *no_add_attrs)
+{
+    printf("Plugin found");
+}
+
+void plugin_func (void *gcc_data, void *user_data)
+{
+    printf("At least passes are working");  
+}
+
+void plugin_attr_func(void *gcc_data, void *user_data)
+{
+    static bool registered = false;
+    struct attribute_spec *attr;
+    char * name;
+//  TODO: Version checking if (!plugin_default_version_check (version, &gcc_version))
+//    return 1;
+
+    if (!registered)
+    {
+        registered = true;
+    /*
+       OK, call into GCC to register the attribute.
+
+       (register_attribute doesn't have a return value; failures appear
+       to be fatal)
+    */
+
+    /*
+      "struct attribute_spec" is declared in gcc/tree.h
+
+      register_attribute() is called by GCC for various attrs stored in
+      tables of global data e.g.:
+         const struct attribute_spec lto_attribute_table[]
+
+      Hence we must malloc the data, so that it persists for the rest of the
+      lifetime of the process
+
+      We get a "handler" callback, it gets passed the name of the attribute,
+      so maybe we can map names to callables.
+    */
+    attr = (struct attribute_spec *)xmalloc(sizeof(struct attribute_spec));
+    name= (char *)xmalloc(10);
+    strcpy(name ,"isr");
+
+    attr->name = name;
+    *(int*)&attr->min_length = 1;
+    *(int*)&attr->max_length = 1;
+    *(bool*)&attr->decl_required = 0;
+    *(bool*)&attr->type_required = 0;
+    *(bool*)&attr->function_type_required = 0;
+    attr->affects_type_identity  = 0;
+    attr->handler = attr_handler;
+
+    /* Register attribute with GCC */
+    register_attribute (attr);
+    }
+}
+
+int
+plugin_init (struct plugin_name_args *plugin_info,
+             struct plugin_gcc_version *version)
+{
+    //register_callback("plugin", PLUGIN_EARLY_GIMPLE_PASSES_END, plugin_func, NULL);
+    register_callback("plugin", PLUGIN_ATTRIBUTES, plugin_attr_func, NULL); 
+    return 0;
+}

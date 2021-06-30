@@ -1,0 +1,76 @@
+
+;; Function int testup_svcal() (_Z12testup_svcalv, funcdef_no=12, decl_uid=6903, cgraph_uid=12, symbol_order=12)
+
+
+Analyzing function body size: int testup_svcal()
+
+Inline summary for int testup_svcal()/12
+  self time:       6
+  global time:     0
+  self size:       7
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:5.000000, time:6.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+
+__attribute__((irqbox))
+int testup_svcal() ()
+{
+  unsigned int leviathan.0;
+  int * shouldNot;
+  int b;
+  int D.6913;
+  int _5;
+
+  <bb 2>:
+  b = 0;
+  shouldNot_3 = &b;
+  leviathan.0 = (unsigned int) shouldNot_3;
+  leviathan.0 = leviathan.0 & 4294967295;
+  leviathan.0 = leviathan.0 | 0;
+  shouldNot_3 = (int *) leviathan.0;
+  *shouldNot_3 = 10;
+  _5 = 0;
+  b ={v} {CLOBBER};
+
+<L1>:
+  return _5;
+
+}
+
+
+
+;; Function int main() (main, funcdef_no=13, decl_uid=6908, cgraph_uid=13, symbol_order=13)
+
+
+Analyzing function body size: int main()
+
+Inline summary for int main()/13
+  self time:       2
+  global time:     0
+  self size:       3
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+
+int main() ()
+{
+  int D.6916;
+  int _1;
+
+  <bb 2>:
+  _1 = 0;
+
+<L0>:
+  return _1;
+
+}
+
+

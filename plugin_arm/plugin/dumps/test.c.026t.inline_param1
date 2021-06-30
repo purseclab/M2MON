@@ -1,0 +1,271 @@
+
+;; Function fun (fun, funcdef_no=2, decl_uid=5143, cgraph_uid=2, symbol_order=3)
+
+
+Analyzing function body size: fun
+
+Inline summary for fun/3
+  self time:       2
+  global time:     0
+  self size:       3
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+
+fun (int a)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function foo (foo, funcdef_no=1, decl_uid=5135, cgraph_uid=1, symbol_order=1)
+
+
+Analyzing function body size: foo
+
+Inline summary for foo/1
+  self time:       2
+  global time:     0
+  self size:       3
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+
+foo ()
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function testup_svcal (testup_svcal, funcdef_no=4, decl_uid=5141, cgraph_uid=4, symbol_order=5)
+
+
+Analyzing function body size: testup_svcal
+
+Inline summary for testup_svcal/5
+  self time:       51
+  global time:     0
+  self size:       31
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:23.000000, time:24.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+    fun/3 function not considered for inlining
+      loop depth: 0 freq:1000 size: 2 time: 11 callee size: 1 stack: 0
+    indirect call loop depth: 0 freq:1000 size: 4 time: 16
+
+__attribute__((irqbox))
+testup_svcal ()
+{
+  unsigned int leviathan.4;
+  unsigned int leviathan.3;
+  unsigned int leviathan.2;
+  void (*<Te27>) (int) fun_ptr;
+  unsigned int * shouldNot;
+  int b;
+  unsigned int * simple;
+  volatile unsigned int * mem_ref2;
+  volatile unsigned int * mem_ref;
+  struct a * pst;
+  struct a st;
+  int a;
+  volatile unsigned int * D.5180;
+  int a.1;
+  unsigned char D.5178;
+  volatile unsigned char * D.5177;
+  volatile unsigned char * D.5176;
+  int a.0;
+  unsigned int D.5174;
+  volatile unsigned int * D.5173;
+  volatile unsigned int * D.5172;
+  volatile unsigned int * _4;
+  volatile unsigned int * _6;
+  unsigned int _7;
+  int a.0_8;
+  volatile unsigned char * _10;
+  volatile unsigned char * _12;
+  unsigned char _13;
+  int a.1_14;
+  volatile unsigned int * _27;
+
+  <bb 2>:
+  a = 0;
+  a = 2;
+  _4 = 268308480B;
+  *_4 ={v} 0;
+  _6 = 268308480B;
+  _7 ={v} *_6;
+  a.0_8 = (int) _7;
+  a = a.0_8;
+  _10 = 268308480B;
+  *_10 ={v} 0;
+  _12 = 268308480B;
+  _13 ={v} *_12;
+  a.1_14 = (int) _13;
+  a = a.1_14;
+  st.a = 0;
+  pst_17 = &st;
+  leviathan.2 = (unsigned int) pst_17;
+  leviathan.2 = leviathan.2 & 4026531839;
+  leviathan.2 = leviathan.2 | 0;
+  pst_17 = (struct a *) leviathan.2;
+  pst_17->a = 0;
+  mem_ref_19 = 268308480B;
+  mem_ref2_20 = mem_ref_19;
+  *mem_ref_19 ={v} 0;
+  simple_22 = &a;
+  leviathan.3 = (unsigned int) simple_22;
+  leviathan.3 = leviathan.3 & 4026531839;
+  leviathan.3 = leviathan.3 | 0;
+  simple_22 = (unsigned int *) leviathan.3;
+  *simple_22 = 5;
+  b = 0;
+  shouldNot_25 = &b;
+  leviathan.4 = (unsigned int) shouldNot_25;
+  leviathan.4 = leviathan.4 & 4026531839;
+  leviathan.4 = leviathan.4 | 0;
+  shouldNot_25 = (unsigned int *) leviathan.4;
+  *shouldNot_25 = 10;
+  _27 = 250482688B;
+  *_27 ={v} 0;
+  global = 2;
+  fun_ptr_30 = fun;
+  fun_ptr_30 (10);
+  fun (10);
+  a ={v} {CLOBBER};
+  st ={v} {CLOBBER};
+  b ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function test2 (test2, funcdef_no=5, decl_uid=5160, cgraph_uid=5, symbol_order=6)
+
+
+Analyzing function body size: test2
+
+Inline summary for test2/6
+  self time:       2
+  global time:     0
+  self size:       3
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+
+test2 (int c)
+{
+  int D.5181;
+  int _1;
+
+  <bb 2>:
+  _1 = 1;
+
+<L0>:
+  return _1;
+
+}
+
+
+
+;; Function test3 (test3, funcdef_no=6, decl_uid=5163, cgraph_uid=6, symbol_order=7)
+
+
+Analyzing function body size: test3
+
+Inline summary for test3/7
+  self time:       12
+  global time:     0
+  self size:       4
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+    testup_svcal/5 function not considered for inlining
+      loop depth: 0 freq:1000 size: 1 time: 10 callee size:15 stack: 0
+
+test3 (int d)
+{
+  <bb 2>:
+  testup_svcal ();
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=7, decl_uid=5165, cgraph_uid=7, symbol_order=8)
+
+
+Analyzing function body size: main
+
+Inline summary for main/8
+  self time:       57
+  global time:     0
+  self size:       13
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:3.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+    testup_svcal/5 function not considered for inlining
+      loop depth: 0 freq:1000 size: 1 time: 10 callee size:15 stack: 0
+    testup_svcal/5 function not considered for inlining
+      loop depth: 0 freq:1000 size: 1 time: 10 callee size:15 stack: 0
+    test3/7 function not considered for inlining
+      loop depth: 0 freq:1000 size: 2 time: 11 callee size: 2 stack: 0
+    test2/6 function not considered for inlining
+      loop depth: 0 freq:1000 size: 3 time: 12 callee size: 1 stack: 0
+    printf/9 function body not available
+      loop depth: 0 freq:1000 size: 2 time: 11 callee size: 0 stack: 0
+
+main ()
+{
+  int b;
+  int c;
+  int D.5183;
+  int _10;
+
+  <bb 2>:
+  printf ("Crap");
+  c_3 = 100;
+  b_5 = test2 (c_3);
+  b_6 = b_5 + 1;
+  test3 (b_6);
+  testup_svcal ();
+  testup_svcal ();
+  _10 = 0;
+
+<L0>:
+  return _10;
+
+}
+
+

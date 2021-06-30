@@ -1,0 +1,10 @@
+__attribute__((irqbox))
+iowrite_example ()
+{
+  volatile unsigned int * D.4124;
+
+  D.4124 = 1073818624B;
+  *D.4124 = 0;
+}
+
+

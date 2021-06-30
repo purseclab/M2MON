@@ -1,0 +1,1278 @@
+Class timespec
+   size=8 align=4
+   base size=8 base align=4
+timespec (0x0x7f25f30010c0) 0
+
+Class timeval
+   size=8 align=4
+   base size=8 base align=4
+timeval (0x0x7f25f3001120) 0
+
+Class tm
+   size=36 align=4
+   base size=36 base align=4
+tm (0x0x7f25f3001180) 0
+
+Class itimerspec
+   size=16 align=4
+   base size=16 base align=4
+itimerspec (0x0x7f25f3001240) 0
+
+Class sq_entry_s
+   size=4 align=4
+   base size=4 base align=4
+sq_entry_s (0x0x7f25f30012a0) 0
+
+Class dq_entry_s
+   size=8 align=4
+   base size=8 base align=4
+dq_entry_s (0x0x7f25f3001300) 0
+
+Class sq_queue_s
+   size=8 align=4
+   base size=8 base align=4
+sq_queue_s (0x0x7f25f3001360) 0
+
+Class dq_queue_s
+   size=8 align=4
+   base size=8 base align=4
+dq_queue_s (0x0x7f25f30013c0) 0
+
+Class sigval
+   size=4 align=4
+   base size=4 base align=4
+sigval (0x0x7f25f3001420) 0
+
+Class sigevent
+   size=8 align=4
+   base size=8 base align=4
+sigevent (0x0x7f25f3001480) 0
+
+Class siginfo
+   size=8 align=4
+   base size=8 base align=4
+siginfo (0x0x7f25f30014e0) 0
+
+Class sigaction::<anonymous union>
+   size=4 align=4
+   base size=4 base align=4
+sigaction::<anonymous union> (0x0x7f25f30015a0) 0
+
+Class sigaction
+   size=12 align=4
+   base size=12 base align=4
+sigaction (0x0x7f25f3001540) 0
+
+Class semholder_s
+   size=8 align=4
+   base size=8 base align=4
+semholder_s (0x0x7f25f3001600) 0
+
+Class sem_s
+   size=12 align=4
+   base size=12 base align=4
+sem_s (0x0x7f25f3001660) 0
+
+Class pthread_attr_s
+   size=8 align=4
+   base size=8 base align=4
+pthread_attr_s (0x0x7f25f30016c0) 0
+
+Class pthread_cond_s
+   size=12 align=4
+   base size=12 base align=4
+pthread_cond_s (0x0x7f25f3001720) 0
+
+Class pthread_mutexattr_s
+   size=1 align=1
+   base size=1 base align=1
+pthread_mutexattr_s (0x0x7f25f3001780) 0
+
+Class pthread_mutex_s
+   size=16 align=4
+   base size=16 base align=4
+pthread_mutex_s (0x0x7f25f30017e0) 0
+
+Class pthread_barrierattr_s
+   size=4 align=4
+   base size=4 base align=4
+pthread_barrierattr_s (0x0x7f25f3001840) 0
+
+Class pthread_barrier_s
+   size=16 align=4
+   base size=16 base align=4
+pthread_barrier_s (0x0x7f25f30018a0) 0
+
+Class mq_attr
+   size=16 align=4
+   base size=16 base align=4
+mq_attr (0x0x7f25f3001900) 0
+
+Class xcptcontext
+   size=228 align=4
+   base size=228 base align=4
+xcptcontext (0x0x7f25f3001960) 0
+
+Class file_operations
+   size=28 align=4
+   base size=28 base align=4
+file_operations (0x0x7f25f3001e40) 0
+
+Class geometry
+   size=12 align=4
+   base size=12 base align=4
+geometry (0x0x7f25f3001ea0) 0
+
+Class block_operations
+   size=24 align=4
+   base size=24 base align=4
+block_operations (0x0x7f25f3001f00) 0
+
+Class mountpt_operations
+   size=80 align=4
+   base size=80 base align=4
+mountpt_operations (0x0x7f25f3001f60) 0
+
+Class inode_ops_u
+   size=4 align=4
+   base size=4 base align=4
+inode_ops_u (0x0x7f25f305d000) 0
+
+Class inode
+   size=24 align=4
+   base size=24 base align=4
+inode (0x0x7f25f305d060) 0
+
+Class file
+   size=16 align=4
+   base size=16 base align=4
+file (0x0x7f25f305d0c0) 0
+
+Class filelist
+   size=812 align=4
+   base size=812 base align=4
+filelist (0x0x7f25f305d120) 0
+
+Class file_struct
+   size=48 align=4
+   base size=48 base align=4
+file_struct (0x0x7f25f305d180) 0
+
+Class streamlist
+   size=396 align=4
+   base size=396 base align=4
+streamlist (0x0x7f25f305d1e0) 0
+
+Class entry_u
+   size=4 align=4
+   base size=4 base align=4
+entry_u (0x0x7f25f305d240) 0
+
+Class task_group_s
+   size=1280 align=4
+   base size=1280 base align=4
+task_group_s (0x0x7f25f305d2a0) 0
+
+Class tcb_s
+   size=360 align=4
+   base size=360 base align=4
+tcb_s (0x0x7f25f305d300) 0
+
+Class task_tcb_s
+   size=408 align=4
+   base size=408 base align=4
+task_tcb_s (0x0x7f25f305d360) 0
+
+Class pthread_tcb_s
+   size=384 align=4
+   base size=384 base align=4
+pthread_tcb_s (0x0x7f25f305d3c0) 0
+
+Class sched_param
+   size=4 align=4
+   base size=4 base align=4
+sched_param (0x0x7f25f305d420) 0
+
+Class spi_ops_s
+   size=36 align=4
+   base size=36 base align=4
+spi_ops_s (0x0x7f25f305d480) 0
+
+Class spi_dev_s
+   size=4 align=4
+   base size=4 base align=4
+spi_dev_s (0x0x7f25f305d540) 0
+
+Class adc_msg_s
+   size=5 align=1
+   base size=5 base align=1
+adc_msg_s (0x0x7f25f305d5a0) 0
+
+Class adc_fifo_s
+   size=56 align=4
+   base size=56 base align=4
+adc_fifo_s (0x0x7f25f305d600) 0
+
+Class adc_ops_s
+   size=20 align=4
+   base size=20 base align=4
+adc_ops_s (0x0x7f25f305d660) 0
+
+Class adc_dev_s
+   size=92 align=4
+   base size=92 base align=4
+adc_dev_s (0x0x7f25f305d6c0) 0
+
+Class i2c_ops_s
+   size=20 align=4
+   base size=20 base align=4
+i2c_ops_s (0x0x7f25f305d720) 0
+
+Class i2c_msg_s
+   size=12 align=4
+   base size=12 base align=4
+i2c_msg_s (0x0x7f25f305d780) 0
+
+Class i2c_dev_s
+   size=4 align=4
+   base size=4 base align=4
+i2c_dev_s (0x0x7f25f305d7e0) 0
+
+Class stm32_tim_dev_s
+   size=4 align=4
+   base size=4 base align=4
+stm32_tim_dev_s (0x0x7f25f305d9c0) 0
+
+Class stm32_tim_ops_s
+   size=40 align=4
+   base size=40 base align=4
+stm32_tim_ops_s (0x0x7f25f305da20) 0
+
+Class winsize
+   size=4 align=2
+   base size=4 base align=2
+winsize (0x0x7f25f305da80) 0
+
+Class serial_rs485
+   size=12 align=4
+   base size=12 base align=4
+serial_rs485 (0x0x7f25f305dae0) 0
+
+Class usb_ctrlreq_s
+   size=8 align=1
+   base size=8 base align=1
+usb_ctrlreq_s (0x0x7f25f305db40) 0
+
+Class usb_desc_s
+   size=2 align=1
+   base size=2 base align=1
+usb_desc_s (0x0x7f25f305dba0) 0
+
+Class usb_devdesc_s
+   size=18 align=1
+   base size=18 base align=1
+usb_devdesc_s (0x0x7f25f305dc00) 0
+
+Class usb_cfgdesc_s
+   size=9 align=1
+   base size=9 base align=1
+usb_cfgdesc_s (0x0x7f25f305dc60) 0
+
+Class usb_otherspeedconfigdesc_s
+   size=9 align=1
+   base size=9 base align=1
+usb_otherspeedconfigdesc_s (0x0x7f25f305dcc0) 0
+
+Class usb_strdesc_s
+   size=4 align=1
+   base size=4 base align=1
+usb_strdesc_s (0x0x7f25f305dd20) 0
+
+Class usb_ifdesc_s
+   size=9 align=1
+   base size=9 base align=1
+usb_ifdesc_s (0x0x7f25f305dd80) 0
+
+Class usb_epdesc_s
+   size=7 align=1
+   base size=7 base align=1
+usb_epdesc_s (0x0x7f25f305de40) 0
+
+Class usb_audioepdesc_s
+   size=9 align=1
+   base size=9 base align=1
+usb_audioepdesc_s (0x0x7f25f305dea0) 0
+
+Class usb_qualdesc_s
+   size=10 align=1
+   base size=10 base align=1
+usb_qualdesc_s (0x0x7f25f305df00) 0
+
+Class usb_iaddesc_s
+   size=8 align=1
+   base size=8 base align=1
+usb_iaddesc_s (0x0x7f25f30af000) 0
+
+Class usbdev_req_s
+   size=20 align=4
+   base size=20 base align=4
+usbdev_req_s (0x0x7f25f30af060) 0
+
+Class usbdev_epops_s
+   size=28 align=4
+   base size=28 base align=4
+usbdev_epops_s (0x0x7f25f30af0c0) 0
+
+Class usbdev_ep_s
+   size=12 align=4
+   base size=12 base align=4
+usbdev_ep_s (0x0x7f25f30af120) 0
+
+Class usbdev_ops_s
+   size=28 align=4
+   base size=28 base align=4
+usbdev_ops_s (0x0x7f25f30af180) 0
+
+Class usbdev_s
+   size=12 align=4
+   base size=12 base align=4
+usbdev_s (0x0x7f25f30af1e0) 0
+
+Class usbdevclass_driverops_s
+   size=24 align=4
+   base size=24 base align=4
+usbdevclass_driverops_s (0x0x7f25f30af240) 0
+
+Class usbdevclass_driver_s
+   size=8 align=4
+   base size=8 base align=4
+usbdevclass_driver_s (0x0x7f25f30af2a0) 0
+
+Class eth_txdesc_s
+   size=16 align=4
+   base size=16 base align=4
+eth_txdesc_s (0x0x7f25f30af300) 0
+
+Class eth_rxdesc_s
+   size=16 align=4
+   base size=16 base align=4
+eth_rxdesc_s (0x0x7f25f30af360) 0
+
+Class orb_metadata
+   size=8 align=4
+   base size=8 base align=4
+orb_metadata (0x0x7f25f30af3c0) 0
+
+Class rc_channels_s
+   size=120 align=8
+   base size=120 base align=8
+rc_channels_s (0x0x7f25f30af420) 0
+
+Vtable for px4::PX4Message<rc_channels_s>
+px4::PX4Message<rc_channels_s>::_ZTVN3px410PX4MessageI13rc_channels_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<rc_channels_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<rc_channels_s>
+16    (int (*)(...))px4::PX4Message<M>::data<rc_channels_s>
+20    (int (*)(...))px4::PX4Message<M>::data<rc_channels_s>
+
+Class px4::PX4Message<rc_channels_s>
+   size=128 align=8
+   base size=128 base align=8
+px4::PX4Message<rc_channels_s> (0x0x7f25f30af6c0) 0
+    vptr=((& px4::PX4Message<rc_channels_s>::_ZTVN3px410PX4MessageI13rc_channels_sEE) + 8u)
+
+Vtable for px4::px4_rc_channels
+px4::px4_rc_channels::_ZTVN3px415px4_rc_channelsE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_rc_channels::~px4_rc_channels
+12    (int (*)(...))px4::px4_rc_channels::~px4_rc_channels
+16    (int (*)(...))px4::PX4Message<M>::data<rc_channels_s>
+20    (int (*)(...))px4::PX4Message<M>::data<rc_channels_s>
+
+Class px4::px4_rc_channels
+   size=128 align=8
+   base size=128 base align=8
+px4::px4_rc_channels (0x0x7f25f3c560d0) 0
+    vptr=((& px4::px4_rc_channels::_ZTVN3px415px4_rc_channelsE) + 8u)
+  px4::PX4Message<rc_channels_s> (0x0x7f25f30af720) 0
+      primary-for px4::px4_rc_channels (0x0x7f25f3c560d0)
+
+Class vehicle_attitude_setpoint_s
+   size=112 align=8
+   base size=112 base align=8
+vehicle_attitude_setpoint_s (0x0x7f25f30afcc0) 0
+
+Vtable for px4::PX4Message<vehicle_attitude_setpoint_s>
+px4::PX4Message<vehicle_attitude_setpoint_s>::_ZTVN3px410PX4MessageI27vehicle_attitude_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_attitude_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_attitude_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_setpoint_s>
+
+Class px4::PX4Message<vehicle_attitude_setpoint_s>
+   size=120 align=8
+   base size=120 base align=8
+px4::PX4Message<vehicle_attitude_setpoint_s> (0x0x7f25f30afd20) 0
+    vptr=((& px4::PX4Message<vehicle_attitude_setpoint_s>::_ZTVN3px410PX4MessageI27vehicle_attitude_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_attitude_setpoint
+px4::px4_vehicle_attitude_setpoint::_ZTVN3px429px4_vehicle_attitude_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_attitude_setpoint::~px4_vehicle_attitude_setpoint
+12    (int (*)(...))px4::px4_vehicle_attitude_setpoint::~px4_vehicle_attitude_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_setpoint_s>
+
+Class px4::px4_vehicle_attitude_setpoint
+   size=120 align=8
+   base size=120 base align=8
+px4::px4_vehicle_attitude_setpoint (0x0x7f25f3c561a0) 0
+    vptr=((& px4::px4_vehicle_attitude_setpoint::_ZTVN3px429px4_vehicle_attitude_setpointE) + 8u)
+  px4::PX4Message<vehicle_attitude_setpoint_s> (0x0x7f25f30afd80) 0
+      primary-for px4::px4_vehicle_attitude_setpoint (0x0x7f25f3c561a0)
+
+Class manual_control_setpoint_s
+   size=56 align=8
+   base size=56 base align=8
+manual_control_setpoint_s (0x0x7f25f2cf7420) 0
+
+Vtable for px4::PX4Message<manual_control_setpoint_s>
+px4::PX4Message<manual_control_setpoint_s>::_ZTVN3px410PX4MessageI25manual_control_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<manual_control_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<manual_control_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<manual_control_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<manual_control_setpoint_s>
+
+Class px4::PX4Message<manual_control_setpoint_s>
+   size=64 align=8
+   base size=64 base align=8
+px4::PX4Message<manual_control_setpoint_s> (0x0x7f25f2cf7480) 0
+    vptr=((& px4::PX4Message<manual_control_setpoint_s>::_ZTVN3px410PX4MessageI25manual_control_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_manual_control_setpoint
+px4::px4_manual_control_setpoint::_ZTVN3px427px4_manual_control_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_manual_control_setpoint::~px4_manual_control_setpoint
+12    (int (*)(...))px4::px4_manual_control_setpoint::~px4_manual_control_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<manual_control_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<manual_control_setpoint_s>
+
+Class px4::px4_manual_control_setpoint
+   size=64 align=8
+   base size=64 base align=8
+px4::px4_manual_control_setpoint (0x0x7f25f3c56208) 0
+    vptr=((& px4::px4_manual_control_setpoint::_ZTVN3px427px4_manual_control_setpointE) + 8u)
+  px4::PX4Message<manual_control_setpoint_s> (0x0x7f25f2cf7540) 0
+      primary-for px4::px4_manual_control_setpoint (0x0x7f25f3c56208)
+
+Class actuator_controls_s
+   size=48 align=8
+   base size=48 base align=8
+actuator_controls_s (0x0x7f25f2cf7b40) 0
+
+Vtable for px4::PX4Message<actuator_controls_s>
+px4::PX4Message<actuator_controls_s>::_ZTVN3px410PX4MessageI19actuator_controls_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_s>
+
+Class px4::PX4Message<actuator_controls_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<actuator_controls_s> (0x0x7f25f2cf7ba0) 0
+    vptr=((& px4::PX4Message<actuator_controls_s>::_ZTVN3px410PX4MessageI19actuator_controls_sEE) + 8u)
+
+Vtable for px4::px4_actuator_controls
+px4::px4_actuator_controls::_ZTVN3px421px4_actuator_controlsE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_controls::~px4_actuator_controls
+12    (int (*)(...))px4::px4_actuator_controls::~px4_actuator_controls
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_s>
+
+Class px4::px4_actuator_controls
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_actuator_controls (0x0x7f25f3c56270) 0
+    vptr=((& px4::px4_actuator_controls::_ZTVN3px421px4_actuator_controlsE) + 8u)
+  px4::PX4Message<actuator_controls_s> (0x0x7f25f2cf7c60) 0
+      primary-for px4::px4_actuator_controls (0x0x7f25f3c56270)
+
+Class actuator_controls_0_s
+   size=48 align=8
+   base size=48 base align=8
+actuator_controls_0_s (0x0x7f25f2d22240) 0
+
+Vtable for px4::PX4Message<actuator_controls_0_s>
+px4::PX4Message<actuator_controls_0_s>::_ZTVN3px410PX4MessageI21actuator_controls_0_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_0_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_0_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_0_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_0_s>
+
+Class px4::PX4Message<actuator_controls_0_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<actuator_controls_0_s> (0x0x7f25f2d222a0) 0
+    vptr=((& px4::PX4Message<actuator_controls_0_s>::_ZTVN3px410PX4MessageI21actuator_controls_0_sEE) + 8u)
+
+Vtable for px4::px4_actuator_controls_0
+px4::px4_actuator_controls_0::_ZTVN3px423px4_actuator_controls_0E: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_controls_0::~px4_actuator_controls_0
+12    (int (*)(...))px4::px4_actuator_controls_0::~px4_actuator_controls_0
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_0_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_0_s>
+
+Class px4::px4_actuator_controls_0
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_actuator_controls_0 (0x0x7f25f3c56340) 0
+    vptr=((& px4::px4_actuator_controls_0::_ZTVN3px423px4_actuator_controls_0E) + 8u)
+  px4::PX4Message<actuator_controls_0_s> (0x0x7f25f2d22300) 0
+      primary-for px4::px4_actuator_controls_0 (0x0x7f25f3c56340)
+
+Class actuator_controls_1_s
+   size=48 align=8
+   base size=48 base align=8
+actuator_controls_1_s (0x0x7f25f2d228a0) 0
+
+Vtable for px4::PX4Message<actuator_controls_1_s>
+px4::PX4Message<actuator_controls_1_s>::_ZTVN3px410PX4MessageI21actuator_controls_1_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_1_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_1_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_1_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_1_s>
+
+Class px4::PX4Message<actuator_controls_1_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<actuator_controls_1_s> (0x0x7f25f2d22900) 0
+    vptr=((& px4::PX4Message<actuator_controls_1_s>::_ZTVN3px410PX4MessageI21actuator_controls_1_sEE) + 8u)
+
+Vtable for px4::px4_actuator_controls_1
+px4::px4_actuator_controls_1::_ZTVN3px423px4_actuator_controls_1E: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_controls_1::~px4_actuator_controls_1
+12    (int (*)(...))px4::px4_actuator_controls_1::~px4_actuator_controls_1
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_1_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_1_s>
+
+Class px4::px4_actuator_controls_1
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_actuator_controls_1 (0x0x7f25f3c56410) 0
+    vptr=((& px4::px4_actuator_controls_1::_ZTVN3px423px4_actuator_controls_1E) + 8u)
+  px4::PX4Message<actuator_controls_1_s> (0x0x7f25f2d22960) 0
+      primary-for px4::px4_actuator_controls_1 (0x0x7f25f3c56410)
+
+Class actuator_controls_2_s
+   size=48 align=8
+   base size=48 base align=8
+actuator_controls_2_s (0x0x7f25f2d22f00) 0
+
+Vtable for px4::PX4Message<actuator_controls_2_s>
+px4::PX4Message<actuator_controls_2_s>::_ZTVN3px410PX4MessageI21actuator_controls_2_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_2_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_2_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_2_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_2_s>
+
+Class px4::PX4Message<actuator_controls_2_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<actuator_controls_2_s> (0x0x7f25f2d22f60) 0
+    vptr=((& px4::PX4Message<actuator_controls_2_s>::_ZTVN3px410PX4MessageI21actuator_controls_2_sEE) + 8u)
+
+Vtable for px4::px4_actuator_controls_2
+px4::px4_actuator_controls_2::_ZTVN3px423px4_actuator_controls_2E: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_controls_2::~px4_actuator_controls_2
+12    (int (*)(...))px4::px4_actuator_controls_2::~px4_actuator_controls_2
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_2_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_2_s>
+
+Class px4::px4_actuator_controls_2
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_actuator_controls_2 (0x0x7f25f3c564e0) 0
+    vptr=((& px4::px4_actuator_controls_2::_ZTVN3px423px4_actuator_controls_2E) + 8u)
+  px4::PX4Message<actuator_controls_2_s> (0x0x7f25f2d54000) 0
+      primary-for px4::px4_actuator_controls_2 (0x0x7f25f3c564e0)
+
+Class actuator_controls_3_s
+   size=48 align=8
+   base size=48 base align=8
+actuator_controls_3_s (0x0x7f25f2d545a0) 0
+
+Vtable for px4::PX4Message<actuator_controls_3_s>
+px4::PX4Message<actuator_controls_3_s>::_ZTVN3px410PX4MessageI21actuator_controls_3_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_3_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_controls_3_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_3_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_3_s>
+
+Class px4::PX4Message<actuator_controls_3_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<actuator_controls_3_s> (0x0x7f25f2d54600) 0
+    vptr=((& px4::PX4Message<actuator_controls_3_s>::_ZTVN3px410PX4MessageI21actuator_controls_3_sEE) + 8u)
+
+Vtable for px4::px4_actuator_controls_3
+px4::px4_actuator_controls_3::_ZTVN3px423px4_actuator_controls_3E: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_controls_3::~px4_actuator_controls_3
+12    (int (*)(...))px4::px4_actuator_controls_3::~px4_actuator_controls_3
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_3_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_controls_3_s>
+
+Class px4::px4_actuator_controls_3
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_actuator_controls_3 (0x0x7f25f3c565b0) 0
+    vptr=((& px4::px4_actuator_controls_3::_ZTVN3px423px4_actuator_controls_3E) + 8u)
+  px4::PX4Message<actuator_controls_3_s> (0x0x7f25f2d54660) 0
+      primary-for px4::px4_actuator_controls_3 (0x0x7f25f3c565b0)
+
+Class vehicle_rates_setpoint_s
+   size=24 align=8
+   base size=24 base align=8
+vehicle_rates_setpoint_s (0x0x7f25f2d54c00) 0
+
+Vtable for px4::PX4Message<vehicle_rates_setpoint_s>
+px4::PX4Message<vehicle_rates_setpoint_s>::_ZTVN3px410PX4MessageI24vehicle_rates_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_rates_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_rates_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_rates_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_rates_setpoint_s>
+
+Class px4::PX4Message<vehicle_rates_setpoint_s>
+   size=32 align=8
+   base size=32 base align=8
+px4::PX4Message<vehicle_rates_setpoint_s> (0x0x7f25f2d54c60) 0
+    vptr=((& px4::PX4Message<vehicle_rates_setpoint_s>::_ZTVN3px410PX4MessageI24vehicle_rates_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_rates_setpoint
+px4::px4_vehicle_rates_setpoint::_ZTVN3px426px4_vehicle_rates_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_rates_setpoint::~px4_vehicle_rates_setpoint
+12    (int (*)(...))px4::px4_vehicle_rates_setpoint::~px4_vehicle_rates_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_rates_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_rates_setpoint_s>
+
+Class px4::px4_vehicle_rates_setpoint
+   size=32 align=8
+   base size=32 base align=8
+px4::px4_vehicle_rates_setpoint (0x0x7f25f3c56618) 0
+    vptr=((& px4::px4_vehicle_rates_setpoint::_ZTVN3px426px4_vehicle_rates_setpointE) + 8u)
+  px4::PX4Message<vehicle_rates_setpoint_s> (0x0x7f25f2d54d20) 0
+      primary-for px4::px4_vehicle_rates_setpoint (0x0x7f25f3c56618)
+
+Class vehicle_attitude_s
+   size=128 align=8
+   base size=128 base align=8
+vehicle_attitude_s (0x0x7f25f2d88300) 0
+
+Vtable for px4::PX4Message<vehicle_attitude_s>
+px4::PX4Message<vehicle_attitude_s>::_ZTVN3px410PX4MessageI18vehicle_attitude_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_attitude_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_attitude_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_s>
+
+Class px4::PX4Message<vehicle_attitude_s>
+   size=136 align=8
+   base size=136 base align=8
+px4::PX4Message<vehicle_attitude_s> (0x0x7f25f2d88360) 0
+    vptr=((& px4::PX4Message<vehicle_attitude_s>::_ZTVN3px410PX4MessageI18vehicle_attitude_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_attitude
+px4::px4_vehicle_attitude::_ZTVN3px420px4_vehicle_attitudeE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_attitude::~px4_vehicle_attitude
+12    (int (*)(...))px4::px4_vehicle_attitude::~px4_vehicle_attitude
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_attitude_s>
+
+Class px4::px4_vehicle_attitude
+   size=136 align=8
+   base size=136 base align=8
+px4::px4_vehicle_attitude (0x0x7f25f3c56680) 0
+    vptr=((& px4::px4_vehicle_attitude::_ZTVN3px420px4_vehicle_attitudeE) + 8u)
+  px4::PX4Message<vehicle_attitude_s> (0x0x7f25f2d88420) 0
+      primary-for px4::px4_vehicle_attitude (0x0x7f25f3c56680)
+
+Class vehicle_control_mode_s
+   size=24 align=8
+   base size=24 base align=8
+vehicle_control_mode_s (0x0x7f25f2d889c0) 0
+
+Vtable for px4::PX4Message<vehicle_control_mode_s>
+px4::PX4Message<vehicle_control_mode_s>::_ZTVN3px410PX4MessageI22vehicle_control_mode_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_control_mode_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_control_mode_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_control_mode_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_control_mode_s>
+
+Class px4::PX4Message<vehicle_control_mode_s>
+   size=32 align=8
+   base size=32 base align=8
+px4::PX4Message<vehicle_control_mode_s> (0x0x7f25f2d88a20) 0
+    vptr=((& px4::PX4Message<vehicle_control_mode_s>::_ZTVN3px410PX4MessageI22vehicle_control_mode_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_control_mode
+px4::px4_vehicle_control_mode::_ZTVN3px424px4_vehicle_control_modeE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_control_mode::~px4_vehicle_control_mode
+12    (int (*)(...))px4::px4_vehicle_control_mode::~px4_vehicle_control_mode
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_control_mode_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_control_mode_s>
+
+Class px4::px4_vehicle_control_mode
+   size=32 align=8
+   base size=32 base align=8
+px4::px4_vehicle_control_mode (0x0x7f25f3c56750) 0
+    vptr=((& px4::px4_vehicle_control_mode::_ZTVN3px424px4_vehicle_control_modeE) + 8u)
+  px4::PX4Message<vehicle_control_mode_s> (0x0x7f25f2d88ae0) 0
+      primary-for px4::px4_vehicle_control_mode (0x0x7f25f3c56750)
+
+Class actuator_armed_s
+   size=16 align=8
+   base size=16 base align=8
+actuator_armed_s (0x0x7f25f2db50c0) 0
+
+Vtable for px4::PX4Message<actuator_armed_s>
+px4::PX4Message<actuator_armed_s>::_ZTVN3px410PX4MessageI16actuator_armed_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_armed_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<actuator_armed_s>
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_armed_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_armed_s>
+
+Class px4::PX4Message<actuator_armed_s>
+   size=24 align=8
+   base size=24 base align=8
+px4::PX4Message<actuator_armed_s> (0x0x7f25f2db5120) 0
+    vptr=((& px4::PX4Message<actuator_armed_s>::_ZTVN3px410PX4MessageI16actuator_armed_sEE) + 8u)
+
+Vtable for px4::px4_actuator_armed
+px4::px4_actuator_armed::_ZTVN3px418px4_actuator_armedE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_actuator_armed::~px4_actuator_armed
+12    (int (*)(...))px4::px4_actuator_armed::~px4_actuator_armed
+16    (int (*)(...))px4::PX4Message<M>::data<actuator_armed_s>
+20    (int (*)(...))px4::PX4Message<M>::data<actuator_armed_s>
+
+Class px4::px4_actuator_armed
+   size=24 align=8
+   base size=24 base align=8
+px4::px4_actuator_armed (0x0x7f25f3c567b8) 0
+    vptr=((& px4::px4_actuator_armed::_ZTVN3px418px4_actuator_armedE) + 8u)
+  px4::PX4Message<actuator_armed_s> (0x0x7f25f2db51e0) 0
+      primary-for px4::px4_actuator_armed (0x0x7f25f3c567b8)
+
+Class parameter_update_s
+   size=8 align=8
+   base size=8 base align=8
+parameter_update_s (0x0x7f25f2db5780) 0
+
+Vtable for px4::PX4Message<parameter_update_s>
+px4::PX4Message<parameter_update_s>::_ZTVN3px410PX4MessageI18parameter_update_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<parameter_update_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<parameter_update_s>
+16    (int (*)(...))px4::PX4Message<M>::data<parameter_update_s>
+20    (int (*)(...))px4::PX4Message<M>::data<parameter_update_s>
+
+Class px4::PX4Message<parameter_update_s>
+   size=16 align=8
+   base size=16 base align=8
+px4::PX4Message<parameter_update_s> (0x0x7f25f2db57e0) 0
+    vptr=((& px4::PX4Message<parameter_update_s>::_ZTVN3px410PX4MessageI18parameter_update_sEE) + 8u)
+
+Vtable for px4::px4_parameter_update
+px4::px4_parameter_update::_ZTVN3px420px4_parameter_updateE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_parameter_update::~px4_parameter_update
+12    (int (*)(...))px4::px4_parameter_update::~px4_parameter_update
+16    (int (*)(...))px4::PX4Message<M>::data<parameter_update_s>
+20    (int (*)(...))px4::PX4Message<M>::data<parameter_update_s>
+
+Class px4::px4_parameter_update
+   size=16 align=8
+   base size=16 base align=8
+px4::px4_parameter_update (0x0x7f25f3c56820) 0
+    vptr=((& px4::px4_parameter_update::_ZTVN3px420px4_parameter_updateE) + 8u)
+  px4::PX4Message<parameter_update_s> (0x0x7f25f2db58a0) 0
+      primary-for px4::px4_parameter_update (0x0x7f25f3c56820)
+
+Class vehicle_status_s
+   size=160 align=8
+   base size=160 base align=8
+vehicle_status_s (0x0x7f25f2db5e40) 0
+
+Vtable for px4::PX4Message<vehicle_status_s>
+px4::PX4Message<vehicle_status_s>::_ZTVN3px410PX4MessageI16vehicle_status_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_status_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_status_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_status_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_status_s>
+
+Class px4::PX4Message<vehicle_status_s>
+   size=168 align=8
+   base size=168 base align=8
+px4::PX4Message<vehicle_status_s> (0x0x7f25f2db5ea0) 0
+    vptr=((& px4::PX4Message<vehicle_status_s>::_ZTVN3px410PX4MessageI16vehicle_status_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_status
+px4::px4_vehicle_status::_ZTVN3px418px4_vehicle_statusE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_status::~px4_vehicle_status
+12    (int (*)(...))px4::px4_vehicle_status::~px4_vehicle_status
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_status_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_status_s>
+
+Class px4::px4_vehicle_status
+   size=168 align=8
+   base size=168 base align=8
+px4::px4_vehicle_status (0x0x7f25f3c56888) 0
+    vptr=((& px4::px4_vehicle_status::_ZTVN3px418px4_vehicle_statusE) + 8u)
+  px4::PX4Message<vehicle_status_s> (0x0x7f25f2db5f60) 0
+      primary-for px4::px4_vehicle_status (0x0x7f25f3c56888)
+
+Class vehicle_local_position_setpoint_s
+   size=48 align=8
+   base size=48 base align=8
+vehicle_local_position_setpoint_s (0x0x7f25f2df5540) 0
+
+Vtable for px4::PX4Message<vehicle_local_position_setpoint_s>
+px4::PX4Message<vehicle_local_position_setpoint_s>::_ZTVN3px410PX4MessageI33vehicle_local_position_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_local_position_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_local_position_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_setpoint_s>
+
+Class px4::PX4Message<vehicle_local_position_setpoint_s>
+   size=56 align=8
+   base size=56 base align=8
+px4::PX4Message<vehicle_local_position_setpoint_s> (0x0x7f25f2df55a0) 0
+    vptr=((& px4::PX4Message<vehicle_local_position_setpoint_s>::_ZTVN3px410PX4MessageI33vehicle_local_position_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_local_position_setpoint
+px4::px4_vehicle_local_position_setpoint::_ZTVN3px435px4_vehicle_local_position_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_local_position_setpoint::~px4_vehicle_local_position_setpoint
+12    (int (*)(...))px4::px4_vehicle_local_position_setpoint::~px4_vehicle_local_position_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_setpoint_s>
+
+Class px4::px4_vehicle_local_position_setpoint
+   size=56 align=8
+   base size=56 base align=8
+px4::px4_vehicle_local_position_setpoint (0x0x7f25f3c568f0) 0
+    vptr=((& px4::px4_vehicle_local_position_setpoint::_ZTVN3px435px4_vehicle_local_position_setpointE) + 8u)
+  px4::PX4Message<vehicle_local_position_setpoint_s> (0x0x7f25f2df5600) 0
+      primary-for px4::px4_vehicle_local_position_setpoint (0x0x7f25f3c568f0)
+
+Class vehicle_global_velocity_setpoint_s
+   size=12 align=4
+   base size=12 base align=4
+vehicle_global_velocity_setpoint_s (0x0x7f25f2df5d20) 0
+
+Vtable for px4::PX4Message<vehicle_global_velocity_setpoint_s>
+px4::PX4Message<vehicle_global_velocity_setpoint_s>::_ZTVN3px410PX4MessageI34vehicle_global_velocity_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_global_velocity_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_global_velocity_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_global_velocity_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_global_velocity_setpoint_s>
+
+Class px4::PX4Message<vehicle_global_velocity_setpoint_s>
+   size=16 align=4
+   base size=16 base align=4
+px4::PX4Message<vehicle_global_velocity_setpoint_s> (0x0x7f25f2df5d80) 0
+    vptr=((& px4::PX4Message<vehicle_global_velocity_setpoint_s>::_ZTVN3px410PX4MessageI34vehicle_global_velocity_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_global_velocity_setpoint
+px4::px4_vehicle_global_velocity_setpoint::_ZTVN3px436px4_vehicle_global_velocity_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_global_velocity_setpoint::~px4_vehicle_global_velocity_setpoint
+12    (int (*)(...))px4::px4_vehicle_global_velocity_setpoint::~px4_vehicle_global_velocity_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_global_velocity_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_global_velocity_setpoint_s>
+
+Class px4::px4_vehicle_global_velocity_setpoint
+   size=16 align=4
+   base size=16 base align=4
+px4::px4_vehicle_global_velocity_setpoint (0x0x7f25f3c569c0) 0
+    vptr=((& px4::px4_vehicle_global_velocity_setpoint::_ZTVN3px436px4_vehicle_global_velocity_setpointE) + 8u)
+  px4::PX4Message<vehicle_global_velocity_setpoint_s> (0x0x7f25f2df5de0) 0
+      primary-for px4::px4_vehicle_global_velocity_setpoint (0x0x7f25f3c569c0)
+
+Class vehicle_local_position_s
+   size=112 align=8
+   base size=112 base align=8
+vehicle_local_position_s (0x0x7f25f2e1c540) 0
+
+Vtable for px4::PX4Message<vehicle_local_position_s>
+px4::PX4Message<vehicle_local_position_s>::_ZTVN3px410PX4MessageI24vehicle_local_position_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_local_position_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_local_position_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_s>
+
+Class px4::PX4Message<vehicle_local_position_s>
+   size=120 align=8
+   base size=120 base align=8
+px4::PX4Message<vehicle_local_position_s> (0x0x7f25f2e1c5a0) 0
+    vptr=((& px4::PX4Message<vehicle_local_position_s>::_ZTVN3px410PX4MessageI24vehicle_local_position_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_local_position
+px4::px4_vehicle_local_position::_ZTVN3px426px4_vehicle_local_positionE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_local_position::~px4_vehicle_local_position
+12    (int (*)(...))px4::px4_vehicle_local_position::~px4_vehicle_local_position
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_local_position_s>
+
+Class px4::px4_vehicle_local_position
+   size=120 align=8
+   base size=120 base align=8
+px4::px4_vehicle_local_position (0x0x7f25f3c56a90) 0
+    vptr=((& px4::px4_vehicle_local_position::_ZTVN3px426px4_vehicle_local_positionE) + 8u)
+  px4::PX4Message<vehicle_local_position_s> (0x0x7f25f2e1c660) 0
+      primary-for px4::px4_vehicle_local_position (0x0x7f25f3c56a90)
+
+Class position_setpoint_s
+   size=104 align=8
+   base size=104 base align=8
+position_setpoint_s (0x0x7f25f2e1cc00) 0
+
+Class position_setpoint_triplet_s
+   size=320 align=8
+   base size=320 base align=8
+position_setpoint_triplet_s (0x0x7f25f2e1cc60) 0
+
+Vtable for px4::PX4Message<position_setpoint_triplet_s>
+px4::PX4Message<position_setpoint_triplet_s>::_ZTVN3px410PX4MessageI27position_setpoint_triplet_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<position_setpoint_triplet_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<position_setpoint_triplet_s>
+16    (int (*)(...))px4::PX4Message<M>::data<position_setpoint_triplet_s>
+20    (int (*)(...))px4::PX4Message<M>::data<position_setpoint_triplet_s>
+
+Class px4::PX4Message<position_setpoint_triplet_s>
+   size=328 align=8
+   base size=328 base align=8
+px4::PX4Message<position_setpoint_triplet_s> (0x0x7f25f2e1ccc0) 0
+    vptr=((& px4::PX4Message<position_setpoint_triplet_s>::_ZTVN3px410PX4MessageI27position_setpoint_triplet_sEE) + 8u)
+
+Vtable for px4::px4_position_setpoint_triplet
+px4::px4_position_setpoint_triplet::_ZTVN3px429px4_position_setpoint_tripletE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_position_setpoint_triplet::~px4_position_setpoint_triplet
+12    (int (*)(...))px4::px4_position_setpoint_triplet::~px4_position_setpoint_triplet
+16    (int (*)(...))px4::PX4Message<M>::data<position_setpoint_triplet_s>
+20    (int (*)(...))px4::PX4Message<M>::data<position_setpoint_triplet_s>
+
+Class px4::px4_position_setpoint_triplet
+   size=328 align=8
+   base size=328 base align=8
+px4::px4_position_setpoint_triplet (0x0x7f25f3c56b60) 0
+    vptr=((& px4::px4_position_setpoint_triplet::_ZTVN3px429px4_position_setpoint_tripletE) + 8u)
+  px4::PX4Message<position_setpoint_triplet_s> (0x0x7f25f2e1cd20) 0
+      primary-for px4::px4_position_setpoint_triplet (0x0x7f25f3c56b60)
+
+Class offboard_control_mode_s
+   size=16 align=8
+   base size=16 base align=8
+offboard_control_mode_s (0x0x7f25f2e4c3c0) 0
+
+Vtable for px4::PX4Message<offboard_control_mode_s>
+px4::PX4Message<offboard_control_mode_s>::_ZTVN3px410PX4MessageI23offboard_control_mode_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<offboard_control_mode_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<offboard_control_mode_s>
+16    (int (*)(...))px4::PX4Message<M>::data<offboard_control_mode_s>
+20    (int (*)(...))px4::PX4Message<M>::data<offboard_control_mode_s>
+
+Class px4::PX4Message<offboard_control_mode_s>
+   size=24 align=8
+   base size=24 base align=8
+px4::PX4Message<offboard_control_mode_s> (0x0x7f25f2e4c420) 0
+    vptr=((& px4::PX4Message<offboard_control_mode_s>::_ZTVN3px410PX4MessageI23offboard_control_mode_sEE) + 8u)
+
+Vtable for px4::px4_offboard_control_mode
+px4::px4_offboard_control_mode::_ZTVN3px425px4_offboard_control_modeE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_offboard_control_mode::~px4_offboard_control_mode
+12    (int (*)(...))px4::px4_offboard_control_mode::~px4_offboard_control_mode
+16    (int (*)(...))px4::PX4Message<M>::data<offboard_control_mode_s>
+20    (int (*)(...))px4::PX4Message<M>::data<offboard_control_mode_s>
+
+Class px4::px4_offboard_control_mode
+   size=24 align=8
+   base size=24 base align=8
+px4::px4_offboard_control_mode (0x0x7f25f3c56c30) 0
+    vptr=((& px4::px4_offboard_control_mode::_ZTVN3px425px4_offboard_control_modeE) + 8u)
+  px4::PX4Message<offboard_control_mode_s> (0x0x7f25f2e4c4e0) 0
+      primary-for px4::px4_offboard_control_mode (0x0x7f25f3c56c30)
+
+Class vehicle_force_setpoint_s
+   size=16 align=4
+   base size=16 base align=4
+vehicle_force_setpoint_s (0x0x7f25f2e4ca80) 0
+
+Vtable for px4::PX4Message<vehicle_force_setpoint_s>
+px4::PX4Message<vehicle_force_setpoint_s>::_ZTVN3px410PX4MessageI24vehicle_force_setpoint_sEE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_force_setpoint_s>
+12    (int (*)(...))px4::PX4Message<M>::~PX4Message<vehicle_force_setpoint_s>
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_force_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_force_setpoint_s>
+
+Class px4::PX4Message<vehicle_force_setpoint_s>
+   size=20 align=4
+   base size=20 base align=4
+px4::PX4Message<vehicle_force_setpoint_s> (0x0x7f25f2e4cae0) 0
+    vptr=((& px4::PX4Message<vehicle_force_setpoint_s>::_ZTVN3px410PX4MessageI24vehicle_force_setpoint_sEE) + 8u)
+
+Vtable for px4::px4_vehicle_force_setpoint
+px4::px4_vehicle_force_setpoint::_ZTVN3px426px4_vehicle_force_setpointE: 6u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))px4::px4_vehicle_force_setpoint::~px4_vehicle_force_setpoint
+12    (int (*)(...))px4::px4_vehicle_force_setpoint::~px4_vehicle_force_setpoint
+16    (int (*)(...))px4::PX4Message<M>::data<vehicle_force_setpoint_s>
+20    (int (*)(...))px4::PX4Message<M>::data<vehicle_force_setpoint_s>
+
+Class px4::px4_vehicle_force_setpoint
+   size=20 align=4
+   base size=20 base align=4
+px4::px4_vehicle_force_setpoint (0x0x7f25f3c56c98) 0
+    vptr=((& px4::px4_vehicle_force_setpoint::_ZTVN3px426px4_vehicle_force_setpointE) + 8u)
+  px4::PX4Message<vehicle_force_setpoint_s> (0x0x7f25f2e4cba0) 0
+      primary-for px4::px4_vehicle_force_setpoint (0x0x7f25f3c56c98)
+
+Class param_value_u
+   size=8 align=8
+   base size=8 base align=8
+param_value_u (0x0x7f25f2e79180) 0
+
+Class param_info_s
+   size=16 align=8
+   base size=16 base align=8
+param_info_s (0x0x7f25f2e791e0) 0
+
+Class fmu_board_info_s
+   size=64 align=1
+   base size=64 base align=1
+fmu_board_info_s (0x0x7f25f2e79240) 0
+
+Class carrier_board_info_s
+   size=128 align=1
+   base size=128 base align=1
+carrier_board_info_s (0x0x7f25f2e792a0) 0
+
+Class __multiport_info
+   size=12 align=4
+   base size=12 base align=4
+__multiport_info (0x0x7f25f2e79300) 0
+
+Class flock
+   size=16 align=4
+   base size=16 base align=4
+flock (0x0x7f25f2e79360) 0
+
+Class pollfd
+   size=16 align=4
+   base size=16 base align=4
+pollfd (0x0x7f25f2e793c0) 0
+
+Class device::Device::DeviceStructure
+   size=3 align=1
+   base size=3 base align=1
+device::Device::DeviceStructure (0x0x7f25f2e79480) 0
+
+Class device::Device::DeviceId
+   size=4 align=4
+   base size=4 base align=4
+device::Device::DeviceId (0x0x7f25f2e794e0) 0
+
+Vtable for device::Device
+device::Device::_ZTVN6device6DeviceE: 9u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))device::Device::~Device
+12    (int (*)(...))device::Device::~Device
+16    (int (*)(...))device::Device::interrupt
+20    (int (*)(...))device::Device::init
+24    (int (*)(...))device::Device::read
+28    (int (*)(...))device::Device::write
+32    (int (*)(...))device::Device::ioctl
+
+Class device::Device
+   size=36 align=4
+   base size=36 base align=4
+device::Device (0x0x7f25f2e79420) 0
+    vptr=((& device::Device::_ZTVN6device6DeviceE) + 8u)
+
+Vtable for device::CDev
+device::CDev::_ZTVN6device4CDevE: 23u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))device::CDev::~CDev
+12    (int (*)(...))device::CDev::~CDev
+16    (int (*)(...))device::Device::interrupt
+20    (int (*)(...))device::CDev::init
+24    (int (*)(...))device::Device::read
+28    (int (*)(...))device::Device::write
+32    (int (*)(...))device::Device::ioctl
+36    (int (*)(...))device::CDev::open
+40    (int (*)(...))device::CDev::close
+44    (int (*)(...))device::CDev::read
+48    (int (*)(...))device::CDev::write
+52    (int (*)(...))device::CDev::seek
+56    (int (*)(...))device::CDev::ioctl
+60    (int (*)(...))device::CDev::poll
+64    (int (*)(...))device::CDev::poll_state
+68    (int (*)(...))device::CDev::poll_notify
+72    (int (*)(...))device::CDev::poll_notify_one
+76    (int (*)(...))device::CDev::open_first
+80    (int (*)(...))device::CDev::close_last
+84    (int (*)(...))device::CDev::register_class_devname
+88    (int (*)(...))device::CDev::unregister_class_devname
+
+Class device::CDev
+   size=84 align=4
+   base size=84 base align=4
+device::CDev (0x0x7f25f3c56d00) 0
+    vptr=((& device::CDev::_ZTVN6device4CDevE) + 8u)
+  device::Device (0x0x7f25f2e79600) 0
+      primary-for device::CDev (0x0x7f25f3c56d00)
+
+Vtable for device::PIO
+device::PIO::_ZTVN6device3PIOE: 23u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))device::PIO::~PIO
+12    (int (*)(...))device::PIO::~PIO
+16    (int (*)(...))device::Device::interrupt
+20    (int (*)(...))device::PIO::init
+24    (int (*)(...))device::Device::read
+28    (int (*)(...))device::Device::write
+32    (int (*)(...))device::Device::ioctl
+36    (int (*)(...))device::CDev::open
+40    (int (*)(...))device::CDev::close
+44    (int (*)(...))device::CDev::read
+48    (int (*)(...))device::CDev::write
+52    (int (*)(...))device::CDev::seek
+56    (int (*)(...))device::CDev::ioctl
+60    (int (*)(...))device::CDev::poll
+64    (int (*)(...))device::CDev::poll_state
+68    (int (*)(...))device::CDev::poll_notify
+72    (int (*)(...))device::CDev::poll_notify_one
+76    (int (*)(...))device::CDev::open_first
+80    (int (*)(...))device::CDev::close_last
+84    (int (*)(...))device::CDev::register_class_devname
+88    (int (*)(...))device::CDev::unregister_class_devname
+
+Class device::PIO
+   size=88 align=4
+   base size=88 base align=4
+device::PIO (0x0x7f25f3c56d68) 0
+    vptr=((& device::PIO::_ZTVN6device3PIOE) + 8u)
+  device::CDev (0x0x7f25f3c56dd0) 0
+      primary-for device::PIO (0x0x7f25f3c56d68)
+    device::Device (0x0x7f25f2e79720) 0
+        primary-for device::CDev (0x0x7f25f3c56dd0)
+
+Class hrt_call
+   size=32 align=8
+   base size=32 base align=8
+hrt_call (0x0x7f25f2e798a0) 0
+
+Class px4io_mixdata
+   size=3 align=1
+   base size=3 base align=1
+px4io_mixdata (0x0x7f25f2e79900) 0
+
+Class IOPacket
+   size=68 align=1
+   base size=68 base align=1
+IOPacket (0x0x7f25f2e79960) 0
+
+Vtable for PX4IO_serial
+PX4IO_serial::_ZTV12PX4IO_serial: 9u entries
+0     (int (*)(...))0
+4     (int (*)(...))0
+8     (int (*)(...))PX4IO_serial::~PX4IO_serial
+12    (int (*)(...))PX4IO_serial::~PX4IO_serial
+16    (int (*)(...))device::Device::interrupt
+20    (int (*)(...))PX4IO_serial::init
+24    (int (*)(...))PX4IO_serial::read
+28    (int (*)(...))PX4IO_serial::write
+32    (int (*)(...))PX4IO_serial::ioctl
+
+Class PX4IO_serial
+   size=112 align=4
+   base size=112 base align=4
+PX4IO_serial (0x0x7f25f3c56e38) 0
+    vptr=((& PX4IO_serial::_ZTV12PX4IO_serial) + 8u)
+  device::Device (0x0x7f25f2e79a20) 0
+      primary-for PX4IO_serial (0x0x7f25f3c56e38)
+

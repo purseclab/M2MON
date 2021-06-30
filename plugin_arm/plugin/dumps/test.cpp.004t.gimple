@@ -1,0 +1,33 @@
+__attribute__((irqbox))
+int testup_svcal() ()
+{
+  int D.6913;
+  int b;
+  int * shouldNot;
+
+  try
+    {
+      b = 0;
+      shouldNot = &b;
+      *shouldNot = 10;
+      D.6913 = 0;
+      return D.6913;
+    }
+  finally
+    {
+      b = {CLOBBER};
+    }
+}
+
+
+int main() ()
+{
+  int D.6916;
+
+  D.6916 = 0;
+  return D.6916;
+  D.6916 = 0;
+  return D.6916;
+}
+
+

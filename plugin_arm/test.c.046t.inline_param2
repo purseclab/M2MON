@@ -1,0 +1,85 @@
+
+;; Function iowrite_example (iowrite_example, funcdef_no=1, decl_uid=5148, cgraph_uid=1, symbol_order=5)
+
+
+Analyzing function body size: iowrite_example
+
+Inline summary for iowrite_example/5
+  self time:       37
+  global time:     0
+  self size:       20
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:12.000000, time:13.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+    cputreg32/7 function body not available
+      loop depth: 0 freq:1000 size: 3 time: 12 callee size: 0 stack: 0
+    cputreg32/7 function body not available
+      loop depth: 0 freq:1000 size: 3 time: 12 callee size: 0 stack: 0
+
+__attribute__((irqbox_test))
+iowrite_example ()
+{
+  unsigned int * SLR.3;
+  unsigned int * SSP.2;
+  unsigned int * SSB.1;
+  struct UART * uart_2;
+  struct UART * uart_1.0;
+  struct UART * uart_1.0_4;
+
+  <bb 2>:
+  SSB.1 = 268435456;
+  SSP.2 = MEM[(void *)SSB.1];
+  SSP.2 = SSP.2 - 4;
+  MEM[(void *)SSB.1] = SSP.2;
+  MEM[(void *)SSP.2] = SLR.3;
+  uart_2_1 = 266403840B;
+  cputreg32 (1, &uart_2_1->DR);
+  uart_1.0_4 = uart_1;
+  cputreg32 (1, &uart_1.0_4->DR);
+  SLR.3 = MEM[(void *)SSP.2];
+  SSP.2 = SSP.2 + 4;
+  MEM[(void *)SSB.1] = SSP.2;
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=2, decl_uid=5152, cgraph_uid=2, symbol_order=6)
+
+
+Analyzing function body size: main
+
+Inline summary for main/6
+  self time:       12
+  global time:     0
+  self size:       4
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:2.000000, predicate:(true)
+    size:2.000000, time:0.000000, predicate:(not inlined)
+  calls:
+    iowrite_example/5 function not considered for inlining
+      loop depth: 0 freq:1000 size: 1 time: 10 callee size:10 stack: 0
+
+main ()
+{
+  int D.5158;
+  int _3;
+
+  <bb 2>:
+  iowrite_example ();
+  _3 = 0;
+
+<L0>:
+  return _3;
+
+}
+
+

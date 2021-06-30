@@ -1,0 +1,156 @@
+
+;; Function fun (fun, funcdef_no=2, decl_uid=5140, cgraph_uid=2, symbol_order=3)
+
+fun (int a)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function foo (foo, funcdef_no=1, decl_uid=5135, cgraph_uid=1, symbol_order=1)
+
+foo ()
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function testup_svcal (testup_svcal, funcdef_no=4, decl_uid=5138, cgraph_uid=4, symbol_order=5)
+
+__attribute__((irqbox))
+testup_svcal ()
+{
+  unsigned int leviathan.7;
+  unsigned int leviathan.6;
+  unsigned int leviathan.5;
+  unsigned int leviathan.4;
+  unsigned int leviathan.3;
+  unsigned int leviathan.2;
+  void (*<Te27>) (int) fun_ptr;
+  unsigned int * shouldNot;
+  int b;
+  unsigned int * simple;
+  volatile unsigned int * mem_ref2;
+  volatile unsigned int * mem_ref;
+  int a;
+  volatile unsigned int * D.5175;
+  int a.1;
+  unsigned char D.5173;
+  volatile unsigned char * D.5172;
+  volatile unsigned char * D.5171;
+  int a.0;
+  unsigned int D.5169;
+  volatile unsigned int * D.5168;
+  volatile unsigned int * D.5167;
+  volatile unsigned int * _4;
+  volatile unsigned int * _6;
+  unsigned int _7;
+  int a.0_8;
+  volatile unsigned char * _10;
+  volatile unsigned char * _12;
+  unsigned char _13;
+  int a.1_14;
+  volatile unsigned int * _24;
+
+  <bb 2>:
+  a = 0;
+  a = 2;
+  _4 = 268308480B;
+  *_4 ={v} 0;
+  _6 = 268308480B;
+  _7 ={v} *_6;
+  a.0_8 = (int) _7;
+  a = a.0_8;
+  _10 = 268308480B;
+  *_10 ={v} 0;
+  _12 = 268308480B;
+  _13 ={v} *_12;
+  a.1_14 = (int) _13;
+  a = a.1_14;
+  mem_ref_16 = 268308480B;
+  mem_ref2_17 = mem_ref_16;
+  *mem_ref_16 ={v} 0;
+  simple_19 = &a;
+  leviathan.2 = (unsigned int) simple_19;
+  leviathan.3 = leviathan.2 & 4294967295;
+  leviathan.4 = leviathan.3 | 0;
+  simple_19 = (unsigned int *) leviathan.4;
+  *simple_19 = 5;
+  b = 0;
+  shouldNot_22 = &b;
+  leviathan.5 = (unsigned int) shouldNot_22;
+  leviathan.6 = leviathan.5 & 4294967295;
+  leviathan.7 = leviathan.6 | 0;
+  shouldNot_22 = (unsigned int *) leviathan.7;
+  *shouldNot_22 = 10;
+  _24 = 250482688B;
+  *_24 ={v} 0;
+  global = 2;
+  fun_ptr_27 = fun;
+  fun_ptr_27 (10);
+  fun (10);
+  a ={v} {CLOBBER};
+  b ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function test2 (test2, funcdef_no=5, decl_uid=5155, cgraph_uid=5, symbol_order=6)
+
+test2 (int c)
+{
+  int D.5176;
+  int _1;
+
+  <bb 2>:
+  _1 = 1;
+
+<L0>:
+  return _1;
+
+}
+
+
+
+;; Function test3 (test3, funcdef_no=6, decl_uid=5158, cgraph_uid=6, symbol_order=7)
+
+test3 (int d)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=7, decl_uid=5160, cgraph_uid=7, symbol_order=8)
+
+main ()
+{
+  int b;
+  int c;
+  int D.5178;
+  int _8;
+
+  <bb 2>:
+  printf ("Crap");
+  c_3 = 100;
+  b_5 = test2 (c_3);
+  b_6 = b_5 + 1;
+  test3 (b_6);
+  _8 = 0;
+
+<L0>:
+  return _8;
+
+}
+
+

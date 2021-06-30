@@ -1,0 +1,195 @@
+Class sq_entry_s
+   size=4 align=4
+   base size=4 base align=4
+sq_entry_s (0x0x7efc7d5c5960) 0
+
+Class dq_entry_s
+   size=8 align=4
+   base size=8 base align=4
+dq_entry_s (0x0x7efc7d5c59c0) 0
+
+Class sq_queue_s
+   size=8 align=4
+   base size=8 base align=4
+sq_queue_s (0x0x7efc7d5c5a20) 0
+
+Class dq_queue_s
+   size=8 align=4
+   base size=8 base align=4
+dq_queue_s (0x0x7efc7d5c5a80) 0
+
+Class timespec
+   size=8 align=4
+   base size=8 base align=4
+timespec (0x0x7efc7d5c5ae0) 0
+
+Class timeval
+   size=8 align=4
+   base size=8 base align=4
+timeval (0x0x7efc7d5c5b40) 0
+
+Class tm
+   size=36 align=4
+   base size=36 base align=4
+tm (0x0x7efc7d5c5ba0) 0
+
+Class itimerspec
+   size=16 align=4
+   base size=16 base align=4
+itimerspec (0x0x7efc7d5c5c60) 0
+
+Class sigval
+   size=4 align=4
+   base size=4 base align=4
+sigval (0x0x7efc7d5c5cc0) 0
+
+Class sigevent
+   size=8 align=4
+   base size=8 base align=4
+sigevent (0x0x7efc7d5c5d20) 0
+
+Class siginfo
+   size=8 align=4
+   base size=8 base align=4
+siginfo (0x0x7efc7d5c5d80) 0
+
+Class sigaction::<anonymous union>
+   size=4 align=4
+   base size=4 base align=4
+sigaction::<anonymous union> (0x0x7efc7d5c5e40) 0
+
+Class sigaction
+   size=12 align=4
+   base size=12 base align=4
+sigaction (0x0x7efc7d5c5de0) 0
+
+Class semholder_s
+   size=8 align=4
+   base size=8 base align=4
+semholder_s (0x0x7efc7d5c5ea0) 0
+
+Class sem_s
+   size=12 align=4
+   base size=12 base align=4
+sem_s (0x0x7efc7d5c5f00) 0
+
+Class pthread_attr_s
+   size=8 align=4
+   base size=8 base align=4
+pthread_attr_s (0x0x7efc7d5c5f60) 0
+
+Class pthread_cond_s
+   size=12 align=4
+   base size=12 base align=4
+pthread_cond_s (0x0x7efc7d644000) 0
+
+Class pthread_mutexattr_s
+   size=1 align=1
+   base size=1 base align=1
+pthread_mutexattr_s (0x0x7efc7d644060) 0
+
+Class pthread_mutex_s
+   size=16 align=4
+   base size=16 base align=4
+pthread_mutex_s (0x0x7efc7d6440c0) 0
+
+Class pthread_barrierattr_s
+   size=4 align=4
+   base size=4 base align=4
+pthread_barrierattr_s (0x0x7efc7d644120) 0
+
+Class pthread_barrier_s
+   size=16 align=4
+   base size=16 base align=4
+pthread_barrier_s (0x0x7efc7d644180) 0
+
+Class mq_attr
+   size=16 align=4
+   base size=16 base align=4
+mq_attr (0x0x7efc7d6441e0) 0
+
+Class xcptcontext
+   size=228 align=4
+   base size=228 base align=4
+xcptcontext (0x0x7efc7d644240) 0
+
+Class file_operations
+   size=28 align=4
+   base size=28 base align=4
+file_operations (0x0x7efc7d644720) 0
+
+Class geometry
+   size=12 align=4
+   base size=12 base align=4
+geometry (0x0x7efc7d644780) 0
+
+Class block_operations
+   size=24 align=4
+   base size=24 base align=4
+block_operations (0x0x7efc7d6447e0) 0
+
+Class mountpt_operations
+   size=80 align=4
+   base size=80 base align=4
+mountpt_operations (0x0x7efc7d644840) 0
+
+Class inode_ops_u
+   size=4 align=4
+   base size=4 base align=4
+inode_ops_u (0x0x7efc7d6448a0) 0
+
+Class inode
+   size=24 align=4
+   base size=24 base align=4
+inode (0x0x7efc7d644900) 0
+
+Class file
+   size=16 align=4
+   base size=16 base align=4
+file (0x0x7efc7d644960) 0
+
+Class filelist
+   size=812 align=4
+   base size=812 base align=4
+filelist (0x0x7efc7d6449c0) 0
+
+Class file_struct
+   size=48 align=4
+   base size=48 base align=4
+file_struct (0x0x7efc7d644a20) 0
+
+Class streamlist
+   size=396 align=4
+   base size=396 base align=4
+streamlist (0x0x7efc7d644a80) 0
+
+Class entry_u
+   size=4 align=4
+   base size=4 base align=4
+entry_u (0x0x7efc7d644ae0) 0
+
+Class task_group_s
+   size=1280 align=4
+   base size=1280 base align=4
+task_group_s (0x0x7efc7d644b40) 0
+
+Class tcb_s
+   size=360 align=4
+   base size=360 base align=4
+tcb_s (0x0x7efc7d644ba0) 0
+
+Class task_tcb_s
+   size=408 align=4
+   base size=408 base align=4
+task_tcb_s (0x0x7efc7d644c00) 0
+
+Class pthread_tcb_s
+   size=384 align=4
+   base size=384 base align=4
+pthread_tcb_s (0x0x7efc7d644c60) 0
+
+Class sched_param
+   size=4 align=4
+   base size=4 base align=4
+sched_param (0x0x7efc7d644cc0) 0
+
