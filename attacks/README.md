@@ -138,7 +138,7 @@ devop read spi (1)name (2)bus (3)address (4)regstart (5)count
 (5) count=number of bytes to write
 ```
 
-### How to conduct the gyroscope attack?
+### How to conduct the barometer attack?
 1) Read data from registers of the MS5611 barometer sensor.
 
 ```bash
