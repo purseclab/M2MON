@@ -10,7 +10,7 @@ You need a software-defined radio like HACKRF which could simulate GPS L1 signal
 
 2) Find the latest brdc file for navigation data creation
 
-3) When you use brdc3540.14n as an ephemeris file, you can generate GPS messages the command in the below. 
+3) When you use <a href="https://github.com/purseclab/M2MON/tree/main/attacks/GPS_spoofing" target="_blank"> brdc3540.14n</a> as an ephemeris file, you can generate GPS messages the command in the below. 
 ```bash
 ./gps-sdr-sim -b 8 -e brdc3540.14n -l 31.286502,121.032669,100
 ```
