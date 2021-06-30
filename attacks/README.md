@@ -52,7 +52,7 @@ mw 0xE000201C=0x0807efb9 1
 
 ## Timer attack
 ### Prerequisite
-1) You need to know a value of the SysTick register (STK_LOAD). You can probably find such a register address on dataseet or source code of the RTOS (NuttX).
+1) You need to know a value of the SysTick register (STK_LOAD). You can probably find such a register address on datasheet or source code of the RTOS (NuttX).
 
 ### How to conduct the attack?
 1) Insert the code snippet in the below to a control loop (e.g., Copter::one_hz_loop() in ArduPilot)
@@ -65,6 +65,6 @@ volatile unsigned int *Timer_attack = (volatile unsigned int *) 0xE000E014;
 ```
 
 2) You can confirm the effect of the timer attack after booting.
-<img src="https://github.com/purseclab/M2MON/tree/main/attacks/timer_attack/result.png">
+<img src="https://github.com/purseclab/M2MON/blob/main/attacks/timer_attack/result.png">
 
 
