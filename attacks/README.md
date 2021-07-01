@@ -4,13 +4,23 @@ Code for conducting attacks mentioned in the paper. We have 2 zero-day attacks w
 ## GPS Spoofing
 ### Prerequisite
 1) You need to have a software-defined radio like <a href="https://greatscottgadgets.com/hackrf/one/" target="_blank">HackRF One</a> which could simulate GPS L1 signal. 
+
 2) Install HackRF package
 ```bash
-sudo apt-get update -y
-sudo apt-get install -y hackrf
+sudo apt-get update
+sudo apt-get install gnuradio
+sudo apt-get install gqrx-sdr
+sudo apt-get install hackrf
 ```
 
-3) Install <a href="https://github.com/osqzss/gps-sdr-sim" target="_blank"> GPS position simulator</a>
+3) Plug in your HackRF
+
+Verify whether it is working or not
+```bash
+hackrf_info
+```
+
+4) Install <a href="https://github.com/osqzss/gps-sdr-sim" target="_blank"> GPS position simulator</a>
 
 
 ### How to execute it?
@@ -30,9 +40,43 @@ sudo apt-get install -y hackrf
 hackrf_transfer -t gpssim.bin -f 1575420000 -s 2600000 -a 1 -x 0
 ```
 
+## Radio replay attack
+### Prerequisite
+1) Install HackRF package
+```bash
+sudo apt-get update
+sudo apt-get install gnuradio
+sudo apt-get install gqrx-sdr
+sudo apt-get install hackrf
+```
+
+2) Plug in your HackRF
+
+Verify whether it is working or not
+```bash
+hackrf_info
+```
+
+Tune to a FM radio station as a test
+```bash
+gqrx
+```
+
+### How to conduct the radio replay attack?
+1) Record target radio signal by using <a href="https://github.com/purseclab/M2MON/blob/main/attacks/radio_replay_attack/" target="_blank">this</a>
+```bash
+./radio_replay_attack/record.grc
+```
+
+2) Replay the recorded radio signal by using <a href="https://github.com/purseclab/M2MON/blob/main/attacks/radio_replay_attack/" target="_blank">this</a>
+```bash
+./radio_replay_attack/replay.grc
+```
+
+
 ## FPB (Flash Patch and Breakpoint Unit) attack
 ### Prerequisite
-1) Your main system-on-Chip must be equipped with a FPB unit. We used <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f427-437.html" target="_blank">STM32F427</a>.
+1) Your main System-on-Chip must be equipped with a FPB unit. We used <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f427-437.html" target="_blank">STM32F427</a>.
 
 2) RTOS can execute shell commands (e.g., mw and mh).
 
