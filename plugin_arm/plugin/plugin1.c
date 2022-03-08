@@ -1212,14 +1212,14 @@ pass_info3.reference_pass_name = "pro_and_epilogue"; // hook this pass with ssa 
 pass_info3.ref_pass_instance_number = 1; // Insert the pass at the specified                                       instance number of the reference pass.                                       Do it for every instance if it is 0.
 pass_info3.pos_op = PASS_POS_INSERT_AFTER; // After SSA is built
 
-/* 
+ 
 register_callback(plugin_name, PLUGIN_PASS_MANAGER_SETUP, NULL, &pass_info);
 register_callback(plugin_name, PLUGIN_ALL_IPA_PASSES_START, plugin_func, NULL);
 register_callback(plugin_name, PLUGIN_START_UNIT, initialize_builtins, NULL);
 register_callback(plugin_name, PLUGIN_ATTRIBUTES, plugin_attr_func, NULL);
 register_callback(plugin_name, PLUGIN_PASS_MANAGER_SETUP, NULL, &pass_info2);
 register_callback(plugin_name, PLUGIN_PASS_MANAGER_SETUP, NULL, &pass_info3);
-*/
+
 
 /* Open database */
 if (plugin_info -> argc > 0)
