@@ -1,9 +1,0 @@
-
-;; Function iowrite_example (null)
-;; enabled by -tree-original
-
-
-{
-  *1073818624B = 0;
-}
-
