@@ -1,0 +1,14 @@
+
+
+# *************** LibrePilot commits guidelines ***************
+# Each commit needs to have a message like the following sample:
+#  LP-188 Determine AccelTau based on usage
+#
+# It needs to begin with a reference to one or more Jira tickets followed by a short description.
+# If needed add a longer description in the following lines, after an empty line.
+#
+# Before committing, ensure your code is properly formatted using:
+#  	make uncrustify_all 
+# You can format flight or ground code only using respectively 
+# uncrustify_flight or uncrustify_ground
+

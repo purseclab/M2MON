@@ -1,0 +1,15 @@
+#
+# Nested type.
+# Single actuator command.
+#
+
+uint8 actuator_id
+
+#
+# Recommended units are, either:
+#  - Unitless [-1; 1]
+#  - Angular position in radians
+#  - Linear position in meters
+# Status report should normally use the same units.
+#
+float16 command

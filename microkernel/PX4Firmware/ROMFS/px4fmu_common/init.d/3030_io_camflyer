@@ -1,0 +1,8 @@
+#!nsh
+
+sh /etc/init.d/rc.fw_defaults
+
+set MIXER Q
+# Provide ESC a constant 1000 us pulse while disarmed
+set PWM_OUT 4
+set PWM_DISARMED 1000

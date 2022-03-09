@@ -1,0 +1,23 @@
+<xml>
+    <object name="GPSPositionSensor" singleinstance="true" settings="false" category="Sensors">
+        <description>Raw GPS data from @ref GPSModule.</description>
+        <field name="Status" units="" type="enum" elements="1" options="NoGPS,NoFix,Fix2D,Fix3D"/>
+        <field name="Latitude" units="degrees x 10^-7" type="int32" elements="1"/>
+        <field name="Longitude" units="degrees x 10^-7" type="int32" elements="1"/>
+        <field name="Altitude" units="meters" type="float" elements="1"/>
+        <field name="GeoidSeparation" units="meters" type="float" elements="1"/>
+        <field name="Heading" units="degrees" type="float" elements="1"/>
+        <field name="Groundspeed" units="m/s" type="float" elements="1"/>
+        <field name="Satellites" units="" type="int8" elements="1"/>
+        <field name="PDOP" units="" type="float" elements="1"/>
+        <field name="HDOP" units="" type="float" elements="1"/>
+        <field name="VDOP" units="" type="float" elements="1"/>
+        <field name="SensorType" units="" type="enum" elements="1" options="Unknown,NMEA,UBX,UBX7,UBX8,DJI" defaultvalue="Unknown" />
+        <field name="AutoConfigStatus" units="" type="enum" elements="1" options="Disabled,Running,Done,Error" defaultvalue="Disabled" />
+        <field name="BaudRate" units="" type="enum" elements="1" options="2400,4800,9600,19200,38400,57600,115200,230400,Unknown" defaultvalue="Unknown" />
+        <access gcs="readwrite" flight="readwrite"/>
+        <telemetrygcs acked="false" updatemode="manual" period="0"/>
+        <telemetryflight acked="false" updatemode="periodic" period="1000"/>
+        <logging updatemode="manual" period="0"/>
+	</object>
+</xml>

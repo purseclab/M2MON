@@ -1,0 +1,13 @@
+#!nsh
+#
+# Generic 10" Hexa coaxial geometry
+#
+# Lorenz Meier <lorenz@px4.io>
+#
+
+sh /etc/init.d/rc.mc_defaults
+
+set MIXER hexa_cox
+
+# Need to set all 8 channels
+set PWM_OUT 12345678

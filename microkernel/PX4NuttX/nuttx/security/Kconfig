@@ -1,0 +1,21 @@
+#
+# For a description of the syntax of this configuration file,
+# see misc/tools/kconfig-language.txt.
+#
+
+config SECURITY
+	bool "Security"
+	default n
+	---help---
+		Enables different security models.
+
+if SECURITY
+
+config MEMGUARD
+	bool "MPU-based Memory Access Guard"
+	depends on ARMV7M_MPU
+	default n
+	---help---
+		Enables isolating between task memory regions using MPU.
+
+endif

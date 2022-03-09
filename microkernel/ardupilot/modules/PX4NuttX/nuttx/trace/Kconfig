@@ -1,0 +1,50 @@
+#
+# For a description of the syntax of this configuration file,
+# see misc/tools/kconfig-language.txt.
+#
+
+config TRACE
+	bool "Tracing"
+	default n
+	---help---
+		Enables tracing.
+
+if TRACE
+
+config FTRACE
+	bool "Function Tracer"
+	default n
+	---help---
+		Enables tracing every function in the firmware.
+
+if FTRACE
+
+config FTRACE_MAX_FUNCTIONS
+	int "Maximum number of functions to trace"
+	default 512
+	---help---
+		Specifies the maximum number of functions to trace.
+endif
+
+config FTRACE_HASH_BITS
+	int "Number of hash key bits"
+	default 8
+	---help---
+		Specifies the number of key bits of the hash table for 
+		fast function lookups.
+endif
+
+config FTRACE_TARGET_PID
+	int "PID of target process to trace"
+	default 0
+	---help---
+		Specifies the PID of the task to trace.
+endif
+
+config MTRACE
+	bool "Memory Access Tracer"
+	default n
+	---help---
+		Enables tracing every memory access to device-mapped memory regions.
+
+endif
